@@ -14,7 +14,7 @@ export default function CommentaryBoothNextMatchScene() {
       <SceneHeader />
       <SceneContent className="flex items-center justify-end">
         <div className="space-y-6 text-right">
-          <p className="text-white text-xl font-brand uppercase tracking-[1em] -mr-[1em]">
+          <p className="text-white text-xl font-brand uppercase tracking-brand-wider -mr-[1em]">
             Players
           </p>
           <PlayerListItem

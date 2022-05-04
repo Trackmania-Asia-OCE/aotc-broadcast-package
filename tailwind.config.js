@@ -11,6 +11,10 @@ module.exports = {
         'brand-green': '#00FF75',
         'brand-red': '#F0386B',
       },
+      letterSpacing: {
+        'brand-wide': '0.25em',
+        'brand-wider': '1em',
+      },
       fontFamily: {
         brand: ['Erbaum', ...defaultTheme.fontFamily.sans],
       },

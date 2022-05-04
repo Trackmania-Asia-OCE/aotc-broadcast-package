@@ -12,7 +12,7 @@ export function PlayerListItem({ nationality, playerName }: PlayerListItemProps)
         <p className="text-2xl leading-7 font-brand uppercase">{nationality}</p>
       </div>
       <div className="flex items-center justify-start p-9 min-w-0 w-[400px] h-[100px] bg-brand-purple text-brand-turquoise">
-        <p className="text-2xl leading-7 font-brand uppercase truncate tracking-[0.25em]">
+        <p className="text-2xl leading-7 font-brand uppercase truncate tracking-brand-wide">
           {playerName}
         </p>
       </div>
