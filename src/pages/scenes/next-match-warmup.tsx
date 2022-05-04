@@ -4,7 +4,7 @@ import { SceneFooter } from '~/components/ui/scene-footer';
 import { SceneHeader } from '~/components/ui/scene-header';
 import { Screen } from '~/components/ui/screen';
 import { useNextMatch } from '~/modules/matches/hooks';
-import { PlayerListItem } from '~/modules/players/player-list-item';
+import { PlayerListItem } from '~/modules/players/components/player-list-item';
 
 export default function CommentaryBoothNextMatchScene() {
   const { data } = useNextMatch();
