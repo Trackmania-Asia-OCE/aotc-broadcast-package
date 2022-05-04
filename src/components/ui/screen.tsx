@@ -1,17 +1,33 @@
 import * as React from 'react';
 import clsx from 'clsx';
 
-export type ScreenProps = React.ComponentPropsWithoutRef<'main'>;
+export interface ScreenProps extends React.ComponentPropsWithoutRef<'main'> {
+  withBackground?: boolean;
+  gradient?: 'to-right' | 'to-left' | 'none';
+}
 
 export const Screen = React.forwardRef<HTMLDivElement, ScreenProps>(
-  ({ children, className, ...rest }, ref) => {
+  ({ children, className, withBackground, gradient, ...rest }, ref) => {
     return (
       <main
-        className={clsx('flex flex-col w-full min-w-full h-full min-h-screen', className)}
+        className={clsx(
+          'flex flex-col w-full min-w-full h-full min-h-screen',
+          withBackground && 'bg-black bg-opacity-25',
+          className
+        )}
         ref={ref}
         {...rest}
       >
-        {children}
+        <div
+          className={clsx(
+            'flex flex-col flex-1',
+            gradient === 'to-right' && 'bg-gradient-to-r',
+            gradient === 'to-left' && 'bg-gradient-to-l',
+            gradient && 'from-transparent via-transparent to-[#0A0613]'
+          )}
+        >
+          {children}
+        </div>
       </main>
     );
   }

@@ -1,10 +1,10 @@
 import * as React from 'react';
 
-export interface SceneHeaderProps extends React.ComponentPropsWithoutRef<'header'> {
+export interface SceneFooterProps extends React.ComponentPropsWithoutRef<'header'> {
   footerText?: React.ReactNode;
 }
 
-export function SceneFooter({ footerText, className, ...rest }: SceneHeaderProps) {
+export function SceneFooter({ footerText, className, ...rest }: SceneFooterProps) {
   return (
     <footer className="flex flex-row items-start justify-between px-[101px] pb-[97px]" {...rest}>
       <div>
