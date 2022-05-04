@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Erbaum';
+  font-weight: normal;
+  font-style: normal;
+  src: url('/assets/fonts/1_274.otf');
+}
+
+@font-face {
+  font-family: 'Erbaum';
+  font-weight: 500;
+  font-style: normal;
+  src: url('/assets/fonts/1_273.otf');
+}

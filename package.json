@@ -1,0 +1,52 @@
+{
+  "name": "nextjs-typescript-quickstart",
+  "version": "1.0.0",
+  "description": "Get started on Next.js with TypeScript in seconds.",
+  "main": "N/A",
+  "repository": "https://github.com/resir014/nextjs-typescript-quickstart",
+  "author": "Resi Respati <resir014@gmail.com>",
+  "license": "Unlicense",
+  "private": true,
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "format": "prettier --write \"./**/*.{ts,tsx}\"",
+    "lint": "eslint \"**/*.{ts,tsx}\" \"*.config.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "type-check": "tsc --noEmit",
+    "validate": "npm run type-check && npm run lint"
+  },
+  "dependencies": {
+    "clsx": "^1.1.1",
+    "google-spreadsheet": "^3.2.0",
+    "next": "^12.1.6",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/eslint-plugin": "^7.17.7",
+    "@types/node": "^17.0.31",
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.11",
+    "@types/styled-jsx": "^3.4.4",
+    "@typescript-eslint/eslint-plugin": "^5.22.0",
+    "@typescript-eslint/parser": "^5.22.0",
+    "autoprefixer": "^10.4.7",
+    "cross-env": "^7.0.3",
+    "eslint": "8.14.0",
+    "eslint-config-kentcdodds": "^20.2.0",
+    "eslint-config-next": "^12.1.6",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^2.7.1",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "postcss": "^8.4.13",
+    "prettier": "^2.6.2",
+    "stylelint": "^14.8.2",
+    "stylelint-config-recommended": "^7.0.0",
+    "tailwindcss": "^3.0.24",
+    "typescript": "^4.6.4"
+  }
+}
