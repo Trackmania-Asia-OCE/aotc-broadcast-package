@@ -205,6 +205,11 @@
   resolved "https://registry.yarnpkg.com/@types/aria-query/-/aria-query-4.2.2.tgz#ed4e0ad92306a704f9fb132a0cfcf77486dbe2bc"
   integrity sha512-HnYpAE1Y6kRyKM/XkEuiRQhTHvkzMBurTHnpFLYLBGPIylZNPs9jJcuOOYWxPLJCSEtmZT0Y8rHDokKN7rRTig==
 
+"@types/google-spreadsheet@^3.2.1":
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/@types/google-spreadsheet/-/google-spreadsheet-3.2.1.tgz#b53fcd02cb1c703db4b8c35752ebc0a7ec316f0c"
+  integrity sha512-k9fMPyRJuWFoRiD4ZU2xTJTBykeXIh+ittw59UHGvNVkyu0b82DorkEJe36LBlaLkqD2qPBAunVz6JZRMFvWIA==
+
 "@types/json-schema@^7.0.9":
   version "7.0.9"
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.9.tgz#97edc9037ea0c38585320b28964dde3b39e4660d"
