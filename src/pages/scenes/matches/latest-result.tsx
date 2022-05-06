@@ -24,10 +24,10 @@ export default function LatestResultsScene() {
             <ResultsBox>{data?.[1].result ?? ''}</ResultsBox>
           </PlayerListItem>
           <PlayerListItem nationality={data?.[2].country ?? ''} playerName={data?.[2].name ?? ''}>
-            <ResultsBox variant="lose">{data?.[2].result ?? ''}</ResultsBox>
+            <ResultsBox colorScheme="lose">{data?.[2].result ?? ''}</ResultsBox>
           </PlayerListItem>
           <PlayerListItem nationality={data?.[3].country ?? ''} playerName={data?.[3].name ?? ''}>
-            <ResultsBox variant="lose">{data?.[3].result ?? ''}</ResultsBox>
+            <ResultsBox colorScheme="lose">{data?.[3].result ?? ''}</ResultsBox>
           </PlayerListItem>
         </div>
       </SceneContent>

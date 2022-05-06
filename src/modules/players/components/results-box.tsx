@@ -1,13 +1,15 @@
 import clsx from 'clsx';
 import * as React from 'react';
 
-export type ResultsVariants = 'win' | 'lose' | 'first' | 'second' | 'third' | 'fourth';
+export type ResultsColorSchemes = 'win' | 'lose' | 'first' | 'second' | 'third' | 'fourth';
+export type ResultsVariants = 'short' | 'long';
 
 export interface ResultsBoxProps extends React.ComponentPropsWithoutRef<'div'> {
   variant?: ResultsVariants;
+  colorScheme?: ResultsColorSchemes;
 }
 
-function getVariants(variant: ResultsVariants = 'win') {
+function getColorScheme(variant: ResultsColorSchemes = 'win') {
   switch (variant) {
     case 'win': {
       return 'border-brand-green text-brand-green';
@@ -15,18 +17,37 @@ function getVariants(variant: ResultsVariants = 'win') {
     case 'lose': {
       return 'border-brand-red text-brand-red';
     }
+    case 'first': {
+      return 'border-brand-gold text-brand-gold';
+    }
+    case 'second': {
+      return 'border-brand-silver text-brand-silver';
+    }
+    case 'third': {
+      return 'border-brand-bronze text-brand-bronze';
+    }
+    case 'fourth': {
+      return 'border-brand-turquoise text-brand-turquoise';
+    }
     default: {
       return 'border-brand-green text-brand-green';
     }
   }
 }
 
-export function ResultsBox({ className, children, variant = 'win', ...rest }: ResultsBoxProps) {
+export function ResultsBox({
+  className,
+  children,
+  variant = 'long',
+  colorScheme = 'win',
+  ...rest
+}: ResultsBoxProps) {
   return (
     <div
       className={clsx(
-        'flex items-center justify-center w-[100px] h-[100px] border-4',
-        getVariants(variant),
+        'flex items-center justify-center border-4',
+        variant === 'short' ? 'w-[50px] h-[100px]' : 'w-[100px] h-[100px]',
+        getColorScheme(colorScheme),
         className
       )}
       {...rest}
