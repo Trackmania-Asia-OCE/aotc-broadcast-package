@@ -14,12 +14,24 @@ const IndexPage: NextPage = () => {
         <div className="space-y-4">
           <ul>
             <li>
-              <Link href="/scenes/intermission">
+              <Link href="/scenes/empty">
+                <a className="text-brand-purple underline">Empty</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/scenes/empty-75p">
+                <a className="text-brand-purple underline">Empty (75% opacity)</a>
+              </Link>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <Link href="/scenes/matches/intermission">
                 <a className="text-brand-purple underline">Intermission</a>
               </Link>
             </li>
             <li>
-              <Link href="/scenes/next-match-warmup">
+              <Link href="/scenes/matches/next-match-warmup">
                 <a className="text-brand-purple underline">Next Match (Warmup)</a>
               </Link>
             </li>
@@ -41,7 +53,7 @@ const IndexPage: NextPage = () => {
               </Link>
             </li>
             <li>
-              <Link href="/scenes/latest-result">
+              <Link href="/scenes/matches/latest-result">
                 <a className="text-brand-purple underline">Latest Result</a>
               </Link>
             </li>
