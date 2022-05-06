@@ -3,29 +3,29 @@ import { getGoogleSheetById } from '~/utils/google-sheets';
 
 const handler: NextApiHandler = async (req, res) => {
   if (req.method === 'GET') {
-    const sheet = await getGoogleSheetById(1679233316);
-    await sheet.loadCells('A1:C4');
+    const sheet = await getGoogleSheetById(717283615);
+    await sheet.loadCells('A6:C9');
 
     res.status(200).json([
       {
-        name: sheet.getCellByA1('B1').value,
-        country: sheet.getCellByA1('A1').value,
-        result: sheet.getCellByA1('C1').value,
+        name: sheet.getCellByA1('B6').value,
+        country: sheet.getCellByA1('A6').value,
+        result: sheet.getCellByA1('C6').value,
       },
       {
-        name: sheet.getCellByA1('B2').value,
-        country: sheet.getCellByA1('A2').value,
-        result: sheet.getCellByA1('C2').value,
+        name: sheet.getCellByA1('B7').value,
+        country: sheet.getCellByA1('A7').value,
+        result: sheet.getCellByA1('C7').value,
       },
       {
-        name: sheet.getCellByA1('B3').value,
-        country: sheet.getCellByA1('A3').value,
-        result: sheet.getCellByA1('C3').value,
+        name: sheet.getCellByA1('B8').value,
+        country: sheet.getCellByA1('A8').value,
+        result: sheet.getCellByA1('C8').value,
       },
       {
-        name: sheet.getCellByA1('B4').value,
-        country: sheet.getCellByA1('A4').value,
-        result: sheet.getCellByA1('C4').value,
+        name: sheet.getCellByA1('B9').value,
+        country: sheet.getCellByA1('A9').value,
+        result: sheet.getCellByA1('C9').value,
       },
     ]);
   } else {

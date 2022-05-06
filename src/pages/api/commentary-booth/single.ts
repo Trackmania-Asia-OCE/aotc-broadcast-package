@@ -3,7 +3,7 @@ import { getGoogleSheetById } from '~/utils/google-sheets';
 
 const handler: NextApiHandler = async (req, res) => {
   if (req.method === 'GET') {
-    const sheet = await getGoogleSheetById(78778798);
+    const sheet = await getGoogleSheetById(717283615);
     await sheet.loadCells('A1:B1');
 
     res.status(200).json({
