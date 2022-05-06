@@ -17,22 +17,10 @@ export default function CommentaryBoothNextMatchScene() {
           <p className="text-white text-xl font-brand uppercase tracking-brand-wider -mr-[1em]">
             Players
           </p>
-          <PlayerListItem
-            nationality={data?.[0].country ?? '??'}
-            playerName={data?.[0].name ?? '...'}
-          />
-          <PlayerListItem
-            nationality={data?.[1].country ?? '??'}
-            playerName={data?.[1].name ?? '...'}
-          />
-          <PlayerListItem
-            nationality={data?.[2].country ?? '??'}
-            playerName={data?.[2].name ?? '...'}
-          />
-          <PlayerListItem
-            nationality={data?.[3].country ?? '??'}
-            playerName={data?.[3].name ?? '...'}
-          />
+          <PlayerListItem nationality={data?.[0].country ?? ''} playerName={data?.[0].name ?? ''} />
+          <PlayerListItem nationality={data?.[1].country ?? ''} playerName={data?.[1].name ?? ''} />
+          <PlayerListItem nationality={data?.[2].country ?? ''} playerName={data?.[2].name ?? ''} />
+          <PlayerListItem nationality={data?.[3].country ?? ''} playerName={data?.[3].name ?? ''} />
         </div>
       </SceneContent>
       <SceneFooter footerText="Next Match" />

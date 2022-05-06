@@ -58,6 +58,23 @@ const IndexPage: NextPage = () => {
               </Link>
             </li>
           </ul>
+          <ul>
+            <li>
+              <Link href="/scenes/commentary-booth/single-results">
+                <a className="text-brand-purple underline">Results + Commentary (Single)</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/scenes/commentary-booth/double-results">
+                <a className="text-brand-purple underline">Results + Commentary (Double)</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/scenes/winner-circle">
+                <a className="text-brand-purple underline">Winner Circle</a>
+              </Link>
+            </li>
+          </ul>
         </div>
       </main>
     </div>

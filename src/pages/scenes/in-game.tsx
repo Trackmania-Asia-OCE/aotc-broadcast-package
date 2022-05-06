@@ -10,7 +10,7 @@ export default function InGameScene() {
   return (
     <Screen>
       <SceneHeader>
-        <CurrentGame game={isLoading ? '...' : data?.current ?? '...'} />
+        <CurrentGame game={isLoading ? '' : data?.current ?? ''} />
       </SceneHeader>
     </Screen>
   );
