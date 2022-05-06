@@ -1,13 +1,21 @@
+import clsx from 'clsx';
 import * as React from 'react';
 
-export interface PlayerListItemProps {
+export interface PlayerListItemProps extends React.ComponentPropsWithoutRef<'div'> {
   nationality: string;
   playerName: string;
 }
 
-export function PlayerListItem({ nationality, playerName }: PlayerListItemProps) {
+export function PlayerListItem({
+  nationality,
+  playerName,
+  children,
+  className,
+  ...rest
+}: PlayerListItemProps) {
   return (
-    <div className="flex flex-row">
+    <div className={clsx('flex flex-row', className)} {...rest}>
+      {children}
       <div className="flex items-center justify-center w-[100px] h-[100px] bg-white text-brand-black">
         <p className="text-2xl leading-7 font-brand uppercase">{nationality}</p>
       </div>

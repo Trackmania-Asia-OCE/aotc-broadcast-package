@@ -4,7 +4,7 @@ import { SceneFooter } from '~/components/ui/scene-footer';
 import { SceneHeader } from '~/components/ui/scene-header';
 import { Screen } from '~/components/ui/screen';
 import { useNextMatch } from '~/modules/matches/hooks';
-import { PlayerListItem } from '~/modules/players/components/player-list-item';
+import { PlayerListItem } from '~/modules/players/components';
 
 export default function CommentaryBoothNextMatchScene() {
   const { data } = useNextMatch();
@@ -13,7 +13,7 @@ export default function CommentaryBoothNextMatchScene() {
     <Screen withBackground gradient="to-right">
       <SceneHeader />
       <SceneContent className="flex items-center justify-end">
-        <div className="space-y-6 text-right">
+        <div className="flex flex-col items-end space-y-6">
           <p className="text-white text-xl font-brand uppercase tracking-brand-wider -mr-[1em]">
             Players
           </p>
