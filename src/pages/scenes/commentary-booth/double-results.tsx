@@ -41,17 +41,13 @@ export default function CommentaryBoothDoubleWithResultsScene() {
               nationality={results?.[2].country ?? ''}
               playerName={results?.[2].name ?? ''}
             >
-              <ResultsBox variant="short" colorScheme="lose">
-                3
-              </ResultsBox>
+              <ResultsBox variant="short">3</ResultsBox>
             </PlayerListItem>
             <PlayerListItem
               nationality={results?.[3].country ?? ''}
               playerName={results?.[3].name ?? ''}
             >
-              <ResultsBox variant="short" colorScheme="lose">
-                4
-              </ResultsBox>
+              <ResultsBox variant="short">4</ResultsBox>
             </PlayerListItem>
           </div>
           <CommentaryBox

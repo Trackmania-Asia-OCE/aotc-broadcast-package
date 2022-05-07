@@ -18,10 +18,10 @@ export default function LatestResultsScene() {
             Latest Result
           </p>
           <PlayerListItem nationality={data?.[0].country ?? ''} playerName={data?.[0].name ?? ''}>
-            <ResultsBox>{data?.[0].result ?? ''}</ResultsBox>
+            <ResultsBox colorScheme="win">{data?.[0].result ?? ''}</ResultsBox>
           </PlayerListItem>
           <PlayerListItem nationality={data?.[1].country ?? ''} playerName={data?.[1].name ?? ''}>
-            <ResultsBox>{data?.[1].result ?? ''}</ResultsBox>
+            <ResultsBox colorScheme="win">{data?.[1].result ?? ''}</ResultsBox>
           </PlayerListItem>
           <PlayerListItem nationality={data?.[2].country ?? ''} playerName={data?.[2].name ?? ''}>
             <ResultsBox colorScheme="lose">{data?.[2].result ?? ''}</ResultsBox>

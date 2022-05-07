@@ -1,7 +1,14 @@
 import clsx from 'clsx';
 import * as React from 'react';
 
-export type ResultsColorSchemes = 'win' | 'lose' | 'first' | 'second' | 'third' | 'fourth';
+export type ResultsColorSchemes =
+  | 'default'
+  | 'win'
+  | 'lose'
+  | 'first'
+  | 'second'
+  | 'third'
+  | 'fourth';
 export type ResultsVariants = 'short' | 'long';
 
 export interface ResultsBoxProps extends React.ComponentPropsWithoutRef<'div'> {
@@ -9,8 +16,11 @@ export interface ResultsBoxProps extends React.ComponentPropsWithoutRef<'div'> {
   colorScheme?: ResultsColorSchemes;
 }
 
-function getColorScheme(variant: ResultsColorSchemes = 'win') {
+function getColorScheme(variant: ResultsColorSchemes = 'default') {
   switch (variant) {
+    case 'default': {
+      return 'border-white text-white';
+    }
     case 'win': {
       return 'border-brand-green text-brand-green';
     }
@@ -30,7 +40,7 @@ function getColorScheme(variant: ResultsColorSchemes = 'win') {
       return 'border-brand-turquoise text-brand-turquoise';
     }
     default: {
-      return 'border-brand-green text-brand-green';
+      return 'border-white text-white';
     }
   }
 }
@@ -39,7 +49,7 @@ export function ResultsBox({
   className,
   children,
   variant = 'long',
-  colorScheme = 'win',
+  colorScheme = 'default',
   ...rest
 }: ResultsBoxProps) {
   return (
