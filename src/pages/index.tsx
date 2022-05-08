@@ -75,6 +75,13 @@ const IndexPage: NextPage = () => {
               </Link>
             </li>
           </ul>
+          <ul>
+            <li>
+              <Link href="/scenes/player-card">
+                <a className="text-brand-purple underline">Player Card</a>
+              </Link>
+            </li>
+          </ul>
         </div>
       </main>
     </div>
