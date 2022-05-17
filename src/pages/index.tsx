@@ -14,6 +14,16 @@ const IndexPage: NextPage = () => {
         <div className="space-y-4">
           <ul>
             <li>
+              <Link href="/scenes/welcome-screen">
+                <a className="text-brand-purple underline">Welcome Screen</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/scenes/end-screen">
+                <a className="text-brand-purple underline">End Screen</a>
+              </Link>
+            </li>
+            <li>
               <Link href="/scenes/empty">
                 <a className="text-brand-purple underline">Empty</a>
               </Link>
