@@ -14,6 +14,21 @@ const IndexPage: NextPage = () => {
         <div className="space-y-4">
           <ul>
             <li>
+              <Link href="/" locale="en-US">
+                <a className="text-brand-purple underline">en</a>
+              </Link>{' '}
+              |{' '}
+              <Link href="/" locale="fr">
+                <a className="text-brand-purple underline">fr</a>
+              </Link>{' '}
+              |{' '}
+              <Link href="/" locale="id">
+                <a className="text-brand-purple underline">id</a>
+              </Link>
+            </li>
+          </ul>
+          <ul>
+            <li>
               <Link href="/scenes/welcome-screen">
                 <a className="text-brand-purple underline">Welcome Screen</a>
               </Link>
