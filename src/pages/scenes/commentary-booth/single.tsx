@@ -13,7 +13,11 @@ export default function CommentaryBoothSingleScene() {
     <Screen className="bg-black bg-opacity-25">
       <SceneHeader />
       <SceneContent className="flex items-center justify-center">
-        <CommentaryBox nationality={data?.country ?? ''} commentatorName={data?.name ?? ''} />
+        <CommentaryBox
+          nationality={data?.country ?? ''}
+          commentatorName={data?.name ?? ''}
+          size="xl"
+        />
       </SceneContent>
       <SceneFooter footerText="Commentary Booth" />
     </Screen>

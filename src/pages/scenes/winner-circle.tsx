@@ -13,20 +13,36 @@ export default function LatestResultsScene() {
     <Screen withBackground>
       <SceneHeader />
       <SceneContent className="flex items-center justify-center">
-        <div className="flex flex-col items-center space-y-6">
+        <div className="flex flex-col items-center space-y-6 w-[600px]">
           <p className="text-white text-[32px] leading-[38px] text-center font-brand uppercase tracking-brand-wide -mr-[0.25em]">
             AOTC Winners
           </p>
-          <PlayerListItem nationality={data?.[0].country ?? ''} playerName={data?.[0].name ?? ''}>
+          <PlayerListItem
+            className="w-full"
+            nationality={data?.[0].country ?? ''}
+            playerName={data?.[0].name ?? ''}
+          >
             <ResultsBox colorScheme="first">1st</ResultsBox>
           </PlayerListItem>
-          <PlayerListItem nationality={data?.[1].country ?? ''} playerName={data?.[1].name ?? ''}>
+          <PlayerListItem
+            className="w-full"
+            nationality={data?.[1].country ?? ''}
+            playerName={data?.[1].name ?? ''}
+          >
             <ResultsBox colorScheme="second">2nd</ResultsBox>
           </PlayerListItem>
-          <PlayerListItem nationality={data?.[2].country ?? ''} playerName={data?.[2].name ?? ''}>
+          <PlayerListItem
+            className="w-full"
+            nationality={data?.[2].country ?? ''}
+            playerName={data?.[2].name ?? ''}
+          >
             <ResultsBox colorScheme="third">3rd</ResultsBox>
           </PlayerListItem>
-          <PlayerListItem nationality={data?.[3].country ?? ''} playerName={data?.[3].name ?? ''}>
+          <PlayerListItem
+            className="w-full"
+            nationality={data?.[3].country ?? ''}
+            playerName={data?.[3].name ?? ''}
+          >
             <ResultsBox colorScheme="fourth">4th</ResultsBox>
           </PlayerListItem>
         </div>

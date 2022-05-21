@@ -11,10 +11,10 @@ export default function WelcomeScreenScene() {
       <SceneContent className="flex items-center justify-end">
         <div className="text-right">
           <h1 className="text-white text-[128px] leading-[154px] font-brand uppercase truncate tracking-brand-wide -mr-[0.25em]">
-            Welcome
+            See You Soon
           </h1>
           <p className="text-white text-[20px] leading-[24px] font-brand uppercase truncate tracking-brand-wide -mr-[0.25em]">
-            Stream Starting
+            Stream Ending
           </p>
         </div>
       </SceneContent>

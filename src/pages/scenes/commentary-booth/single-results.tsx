@@ -20,30 +20,35 @@ export default function CommentaryBoothSingleWithResultsScene() {
           <CommentaryBox
             nationality={commentator?.country ?? ''}
             commentatorName={commentator?.name ?? ''}
+            size="lg"
           />
-          <div className="flex flex-col items-center space-y-6">
+          <div className="flex flex-col flex-1 items-center space-y-6 w-[550px]">
             <p className="text-white text-[32px] leading-[38px] text-center font-brand uppercase tracking-brand-wide -mr-[0.25em]">
               Latest Result
             </p>
             <PlayerListItem
+              className="w-full"
               nationality={results?.[0].country ?? ''}
               playerName={results?.[0].name ?? ''}
             >
               <ResultsBox variant="short">1</ResultsBox>
             </PlayerListItem>
             <PlayerListItem
+              className="w-full"
               nationality={results?.[1].country ?? ''}
               playerName={results?.[1].name ?? ''}
             >
               <ResultsBox variant="short">2</ResultsBox>
             </PlayerListItem>
             <PlayerListItem
+              className="w-full"
               nationality={results?.[2].country ?? ''}
               playerName={results?.[2].name ?? ''}
             >
               <ResultsBox variant="short">3</ResultsBox>
             </PlayerListItem>
             <PlayerListItem
+              className="w-full"
               nationality={results?.[3].country ?? ''}
               playerName={results?.[3].name ?? ''}
             >
