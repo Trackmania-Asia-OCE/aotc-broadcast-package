@@ -13,14 +13,30 @@ export default function CommentaryBoothNextMatchScene() {
     <Screen withBackground gradient="to-right">
       <SceneHeader />
       <SceneContent className="flex items-center justify-end">
-        <div className="flex flex-col items-end space-y-6">
+        <div className="flex flex-col items-end space-y-6 w-[500px]">
           <p className="text-white text-xl font-brand uppercase tracking-brand-wider -mr-[1em]">
             Players
           </p>
-          <PlayerListItem nationality={data?.[0].country ?? ''} playerName={data?.[0].name ?? ''} />
-          <PlayerListItem nationality={data?.[1].country ?? ''} playerName={data?.[1].name ?? ''} />
-          <PlayerListItem nationality={data?.[2].country ?? ''} playerName={data?.[2].name ?? ''} />
-          <PlayerListItem nationality={data?.[3].country ?? ''} playerName={data?.[3].name ?? ''} />
+          <PlayerListItem
+            className="w-full"
+            nationality={data?.[0].country ?? ''}
+            playerName={data?.[0].name ?? ''}
+          />
+          <PlayerListItem
+            className="w-full"
+            nationality={data?.[1].country ?? ''}
+            playerName={data?.[1].name ?? ''}
+          />
+          <PlayerListItem
+            className="w-full"
+            nationality={data?.[2].country ?? ''}
+            playerName={data?.[2].name ?? ''}
+          />
+          <PlayerListItem
+            className="w-full"
+            nationality={data?.[3].country ?? ''}
+            playerName={data?.[3].name ?? ''}
+          />
         </div>
       </SceneContent>
       <SceneFooter footerText="Next Match" />

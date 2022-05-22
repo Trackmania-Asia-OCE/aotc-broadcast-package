@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import { useQuery } from 'react-query';
+import { DEFAULT_REFRESH_TIMEOUT } from '~/utils/constants';
 import { APILocales } from '~/utils/types';
 import { getDoubleCommentators, getSingleCommentators } from './api';
 
@@ -8,7 +9,7 @@ export interface CommentatorDetails {
   name: string;
 }
 
-export function useSingleCommentator(refetchInterval = 10000) {
+export function useSingleCommentator(refetchInterval = DEFAULT_REFRESH_TIMEOUT) {
   const router = useRouter();
   const query = useQuery<CommentatorDetails>(
     'commentary-booth-single',
@@ -21,7 +22,7 @@ export function useSingleCommentator(refetchInterval = 10000) {
   return query;
 }
 
-export function useDoubleCommentators(refetchInterval = 10000) {
+export function useDoubleCommentators(refetchInterval = DEFAULT_REFRESH_TIMEOUT) {
   const router = useRouter();
   const query = useQuery<CommentatorDetails[]>(
     'commentary-booth-double',

@@ -15,10 +15,10 @@ export function PlayerCardItem({
 }: PlayerCardItemProps) {
   return (
     <div className={clsx('flex flex-row', className)} {...rest}>
-      <div className="flex items-center justify-center w-[100px] h-[100px] bg-white text-brand-purple">
+      <div className="flex items-center justify-center w-[100px] h-[100px] flex-shrink-0 bg-white text-brand-purple">
         {icon}
       </div>
-      <div className="flex items-center justify-start p-9 min-w-0 h-[100px] bg-brand-purple text-brand-turquoise">
+      <div className="flex items-center justify-start p-9 flex-1 min-w-0 h-[100px] bg-brand-purple text-brand-turquoise">
         <p className="text-2xl leading-7 font-brand uppercase truncate tracking-brand-wide">
           {description}
         </p>

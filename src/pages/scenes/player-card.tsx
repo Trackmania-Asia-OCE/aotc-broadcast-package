@@ -22,23 +22,27 @@ export default function PlayerCardScene() {
         />
       </SceneHeader>
       <SceneContent className="flex items-center justify-start">
-        <div className="flex flex-col items-start space-y-6">
+        <div className="flex flex-col items-start space-y-6 w-[600px]">
           <p className="text-white text-[32px] leading-[38px] text-center font-brand uppercase tracking-brand-wide -mr-[0.25em]">
             Info
           </p>
           <PlayerCardItem
+            className="w-full"
             icon={<MedalIcon className="w-[50px] h-[50px]" />}
             description={data?.bestResults ?? '-'}
           />
           <PlayerCardItem
+            className="w-full"
             icon={<ControllerIcon className="w-[50px] h-[50px]" />}
             description={data?.input ?? '-'}
           />
           <PlayerCardItem
+            className="w-full"
             icon={<CameraIcon className="w-[50px] h-[50px]" />}
             description={`${data?.camera ?? '-'}`}
           />
           <PlayerCardItem
+            className="w-full"
             icon={<HashtagIcon className="w-[50px] h-[50px]" />}
             description={data?.style ?? '-'}
           />

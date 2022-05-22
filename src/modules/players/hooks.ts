@@ -1,4 +1,5 @@
 import { useQuery } from 'react-query';
+import { DEFAULT_REFRESH_TIMEOUT } from '~/utils/constants';
 import { getPlayerCard } from './api';
 
 export interface PlayerCardDetails {
@@ -12,7 +13,7 @@ export interface PlayerCardDetails {
   style: string;
 }
 
-export function usePlayerCard(refetchInterval = 10000) {
+export function usePlayerCard(refetchInterval = DEFAULT_REFRESH_TIMEOUT) {
   const query = useQuery<PlayerCardDetails>('next-matches', getPlayerCard, { refetchInterval });
 
   return query;
