@@ -27,21 +27,25 @@ export default function PlayerCardScene() {
             Info
           </p>
           <PlayerCardItem
+            isMultiline
             className="w-full"
             icon={<MedalIcon className="w-[50px] h-[50px]" />}
             description={data?.bestResults ?? '-'}
           />
           <PlayerCardItem
+            isMultiline
             className="w-full"
             icon={<ControllerIcon className="w-[50px] h-[50px]" />}
             description={data?.input ?? '-'}
           />
           <PlayerCardItem
+            isMultiline
             className="w-full"
             icon={<CameraIcon className="w-[50px] h-[50px]" />}
             description={`${data?.camera ?? '-'}`}
           />
           <PlayerCardItem
+            isMultiline
             className="w-full"
             icon={<HashtagIcon className="w-[50px] h-[50px]" />}
             description={data?.style ?? '-'}

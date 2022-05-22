@@ -6,7 +6,7 @@ import { Screen } from '~/components/ui/screen';
 import { CommentaryBox } from '~/modules/commentary-booth/components';
 import { useDoubleCommentators } from '~/modules/commentary-booth/hooks';
 import { useLatestResults } from '~/modules/matches/hooks';
-import { PlayerListItem, ResultsBox } from '~/modules/players/components';
+import { ResultsListItem, ResultsBox } from '~/modules/players/components';
 
 export default function CommentaryBoothDoubleWithResultsScene() {
   const { data: commentator } = useDoubleCommentators();
@@ -25,34 +25,34 @@ export default function CommentaryBoothDoubleWithResultsScene() {
             <p className="text-white text-[32px] leading-[38px] text-center font-brand uppercase tracking-brand-wide -mr-[0.25em]">
               Latest Result
             </p>
-            <PlayerListItem
+            <ResultsListItem
               className="w-full"
               nationality={results?.[0].country ?? ''}
               playerName={results?.[0].name ?? ''}
             >
               <ResultsBox variant="short">1</ResultsBox>
-            </PlayerListItem>
-            <PlayerListItem
+            </ResultsListItem>
+            <ResultsListItem
               className="w-full"
               nationality={results?.[1].country ?? ''}
               playerName={results?.[1].name ?? ''}
             >
               <ResultsBox variant="short">2</ResultsBox>
-            </PlayerListItem>
-            <PlayerListItem
+            </ResultsListItem>
+            <ResultsListItem
               className="w-full"
               nationality={results?.[2].country ?? ''}
               playerName={results?.[2].name ?? ''}
             >
               <ResultsBox variant="short">3</ResultsBox>
-            </PlayerListItem>
-            <PlayerListItem
+            </ResultsListItem>
+            <ResultsListItem
               className="w-full"
               nationality={results?.[3].country ?? ''}
               playerName={results?.[3].name ?? ''}
             >
               <ResultsBox variant="short">4</ResultsBox>
-            </PlayerListItem>
+            </ResultsListItem>
           </div>
           <CommentaryBox
             nationality={commentator?.[1].country ?? ''}

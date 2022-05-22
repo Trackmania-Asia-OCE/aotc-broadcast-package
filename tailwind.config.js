@@ -21,10 +21,13 @@ module.exports = {
       fontFamily: {
         brand: ['Erbaum', ...defaultTheme.fontFamily.sans],
       },
+      gridTemplateColumns: {
+        'item-card': '100px minmax(0, 1fr)',
+      },
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/line-clamp')],
 };

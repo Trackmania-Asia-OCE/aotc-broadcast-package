@@ -4,7 +4,7 @@ import { SceneFooter } from '~/components/ui/scene-footer';
 import { SceneHeader } from '~/components/ui/scene-header';
 import { Screen } from '~/components/ui/screen';
 import { useNextMatch } from '~/modules/matches/hooks';
-import { PlayerListItem } from '~/modules/players/components';
+import { ResultsListItem } from '~/modules/players/components';
 
 export default function CommentaryBoothNextMatchScene() {
   const { data } = useNextMatch();
@@ -17,22 +17,22 @@ export default function CommentaryBoothNextMatchScene() {
           <p className="text-white text-xl font-brand uppercase tracking-brand-wider -mr-[1em]">
             Players
           </p>
-          <PlayerListItem
+          <ResultsListItem
             className="w-full"
             nationality={data?.[0].country ?? ''}
             playerName={data?.[0].name ?? ''}
           />
-          <PlayerListItem
+          <ResultsListItem
             className="w-full"
             nationality={data?.[1].country ?? ''}
             playerName={data?.[1].name ?? ''}
           />
-          <PlayerListItem
+          <ResultsListItem
             className="w-full"
             nationality={data?.[2].country ?? ''}
             playerName={data?.[2].name ?? ''}
           />
-          <PlayerListItem
+          <ResultsListItem
             className="w-full"
             nationality={data?.[3].country ?? ''}
             playerName={data?.[3].name ?? ''}

@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import * as React from 'react';
-import { PlayerListItem } from '../../players/components/player-list-item';
+import { ResultsListItem } from '../../players/components/results-list-item';
 
 export interface CommentaryBoxProps {
   nationality: string;
@@ -46,7 +46,7 @@ export function CommentaryBox({ nationality, commentatorName, size = 'md' }: Com
   return (
     <div className={clsx('flex-shrink-0 border-t-4 border-white', renderBoxStyles())}>
       <div className={renderCameraStyles()} />
-      <PlayerListItem nationality={nationality} playerName={commentatorName} />
+      <ResultsListItem nationality={nationality} playerName={commentatorName} />
     </div>
   );
 }

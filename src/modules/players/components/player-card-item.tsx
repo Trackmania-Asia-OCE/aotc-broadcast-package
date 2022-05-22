@@ -4,6 +4,7 @@ import * as React from 'react';
 export interface PlayerCardItemProps extends React.ComponentPropsWithoutRef<'div'> {
   icon?: React.ReactNode;
   description: string;
+  isMultiline?: boolean;
 }
 
 export function PlayerCardItem({
@@ -11,15 +12,21 @@ export function PlayerCardItem({
   description,
   children,
   className,
+  isMultiline = false,
   ...rest
 }: PlayerCardItemProps) {
   return (
-    <div className={clsx('flex flex-row', className)} {...rest}>
+    <div className={clsx('grid grid-cols-item-card', className)} {...rest}>
       <div className="flex items-center justify-center w-[100px] h-[100px] flex-shrink-0 bg-white text-brand-purple">
         {icon}
       </div>
-      <div className="flex items-center justify-start p-9 flex-1 min-w-0 h-[100px] bg-brand-purple text-brand-turquoise">
-        <p className="text-2xl leading-7 font-brand uppercase truncate tracking-brand-wide">
+      <div className="flex items-center justify-start min-w-0 px-9 h-[100px] bg-brand-purple text-brand-turquoise">
+        <p
+          className={clsx(
+            isMultiline ? 'text-xl leading-6 line-clamp-2' : 'text-2xl leading-7 truncate',
+            'font-brand uppercase tracking-brand-wide'
+          )}
+        >
           {description}
         </p>
       </div>

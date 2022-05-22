@@ -1,18 +1,18 @@
 import clsx from 'clsx';
 import * as React from 'react';
 
-export interface PlayerListItemProps extends React.ComponentPropsWithoutRef<'div'> {
+export interface ResultsListItemProps extends React.ComponentPropsWithoutRef<'div'> {
   nationality: string;
   playerName: string;
 }
 
-export function PlayerListItem({
+export function ResultsListItem({
   nationality,
   playerName,
   children,
   className,
   ...rest
-}: PlayerListItemProps) {
+}: ResultsListItemProps) {
   return (
     <div className={clsx('flex flex-row', className)} {...rest}>
       {children}
