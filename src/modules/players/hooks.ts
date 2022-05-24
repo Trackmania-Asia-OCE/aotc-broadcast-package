@@ -1,5 +1,7 @@
+import { useRouter } from 'next/router';
 import { useQuery } from 'react-query';
 import { DEFAULT_REFRESH_TIMEOUT } from '~/utils/constants';
+import { APILocales } from '~/utils/types';
 import { getPlayerCard } from './api';
 
 export interface PlayerCardDetails {
@@ -14,7 +16,14 @@ export interface PlayerCardDetails {
 }
 
 export function usePlayerCard(refetchInterval = DEFAULT_REFRESH_TIMEOUT) {
-  const query = useQuery<PlayerCardDetails>('next-matches', getPlayerCard, { refetchInterval });
+  const router = useRouter();
+  const query = useQuery<PlayerCardDetails>(
+    'next-matches',
+    () => getPlayerCard(router.locale as APILocales),
+    {
+      refetchInterval,
+    }
+  );
 
   return query;
 }
