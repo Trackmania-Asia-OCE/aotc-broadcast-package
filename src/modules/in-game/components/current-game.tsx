@@ -10,7 +10,7 @@ export function CurrentGame({ game }: CurrentGameProps) {
       <div className="flex items-center justify-center w-[50px] h-[50px] border-4 border-white">
         <span className="text-white text-2xl font-brand font-medium uppercase">#</span>
       </div>
-      <div className="flex items-center w-[400px] h-[50px] px-9 min-w-0 bg-brand-purple">
+      <div className="flex items-center max-w-[700px] h-[50px] px-9 min-w-[400px] bg-brand-purple">
         <span className="text-brand-turquoise text-2xl font-brand uppercase truncate tracking-brand-wide">
           {game}
         </span>
