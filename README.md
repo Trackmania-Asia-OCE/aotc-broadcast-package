@@ -1,28 +1,57 @@
-# nextjs-tailwindcss-quickstart
+<p align="center">
+  <img src="social.png">
+</p>
 
-> Get started on Next.js with Tailwind CSS in seconds.
+# AOTC Broadcast Package
 
-This is an example setup of Next.js building on top of the [official TypeScript example](https://github.com/zeit/next.js/tree/master/examples/with-typescript). It adds the following:
+This is the source code for the AOTC broadcast package. To see it in action, watch one of the [main broadcasts](https://www.youtube.com/watch?v=39BRNL1tOqA).
 
-- Simple styling structure with [Tailwind CSS](https://tailwindcss.com/)
-- Basic ESLint and Prettier setup
-- CSS linting with [Stylelint](https://stylelint.io/)
-- TypeScript typechecking as part of `test` script (ready to plug into any CI)
+## Developing
 
-## Deploy your own
+### Prerequisites
 
-Deploy the example using [Vercel](https://vercel.com):
+- [Git](http://git-scm.com/)
+- [Node.js](https://nodejs.org/en/) (16.0.0+)
+- [Yarn](https://classic.yarnpkg.com/) (1.x)
+- Text Editor with [EditorConfig](http://editorconfig.org/) & [Prettier](https://prettier.io/) support. (We recommend [Visual Studio Code](https://code.visualstudio.com/))
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/resir014/nextjs-tailwindcss-quickstart)
+### Environment variables
 
-## How to use
+You will need to provide the following environment variables for local development. You will need service account credentials from Google to use the Google Spreadsheet API, you can [follow this guide](https://theoephraim.github.io/node-google-spreadsheet/#/getting-started/authentication?id=service-account) to create your own.
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example https://github.com/resir014/nextjs-tailwindcss-quickstart nextjs-tailwindcss-quickstart-app
-# or
-yarn create next-app --example https://github.com/resir014/nextjs-tailwindcss-quickstart nextjs-tailwindcss-quickstart-app
+```
+GOOGLE_SHEETS_ID= # the spreadsheet ID of the dashboard spreadsheet
+GOOGLE_SERVICE_ACCOUNT_EMAIL= # the Service Account email given to you
+GOOGLE_PRIVATE_KEY= # the private key received from your Service Account auth details
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js) ([Documentation](https://nextjs.org/docs/deployment)).
+Create a copy of the `.env.example` file and name it `.env`. There, you can put the credentials you receive.
+
+### Setting up
+
+First, you should clone the repository.
+
+```sh-session
+$ git clone https://github.com/Trackmania-Asia-OCE/aotc-broadcast-package.git
+```
+
+After this repository has been cloned, `cd` into the repository:
+
+```sh-session
+$ cd aotc-broadcast-package
+```
+
+Install the project's dependencies. Note that we use Yarn, not npm:
+
+```sh-session
+$ yarn
+```
+
+### Starting a local server
+
+To start developing locally, you have to run the development server.
+
+```sh-session
+$ yarn dev
+ready - started server on 0.0.0.0:3000, url: http://localhost:3000
+```
