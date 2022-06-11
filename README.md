@@ -4,7 +4,7 @@
 
 # AOTC Broadcast Package
 
-This is the source code for the AOTC broadcast package. To see it in action, watch one of the [main broadcasts](https://www.youtube.com/watch?v=39BRNL1tOqA).
+This is the source code for the AOTC broadcast package. To see it in action, watch one of the [main broadcasts](https://www.youtube.com/watch?v=39BRNL1tOqA), and read [this blog post](https://resir014.xyz/posts/2022/05/31/dynamic-broadcast-overlays-with-google-sheets-and-web-technologies) for more on how it works.
 
 ## Developing
 
