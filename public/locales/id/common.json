@@ -1,12 +1,12 @@
 {
   "welcome-screen": {
-    "title": "Welcome",
-    "subtitle": "Stream Starting",
+    "title": "Selamat Datang",
+    "subtitle": "Siaran Dimulai",
     "footer-text": "Intermission"
   },
   "end-screen": {
-    "title": "See You Soon",
-    "subtitle": "Stream Ending",
+    "title": "Sampai Jumpa",
+    "subtitle": "Siaran Berakhir",
     "footer-text": "Intermission"
   },
   "player-card": {
