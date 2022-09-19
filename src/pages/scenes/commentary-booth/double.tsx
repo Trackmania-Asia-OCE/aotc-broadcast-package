@@ -1,3 +1,6 @@
+import { GetStaticPropsContext } from 'next';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import * as React from 'react';
 import { SceneContent } from '~/components/ui/scene-content';
 import { SceneFooter } from '~/components/ui/scene-footer';
@@ -6,7 +9,16 @@ import { Screen } from '~/components/ui/screen';
 import { CommentaryBox } from '~/modules/commentary-booth/components';
 import { useDoubleCommentators } from '~/modules/commentary-booth/hooks';
 
+export async function getStaticProps({ locale }: GetStaticPropsContext) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? 'en', ['common'])),
+    },
+  };
+}
+
 export default function CommentaryBoothDoubleScene() {
+  const { t } = useTranslation('common');
   const { data } = useDoubleCommentators();
 
   return (
@@ -24,7 +36,7 @@ export default function CommentaryBoothDoubleScene() {
           />
         </div>
       </SceneContent>
-      <SceneFooter footerText="Commentary Booth" />
+      <SceneFooter footerText={t('commentary-booth.footer-text')} />
     </Screen>
   );
 }

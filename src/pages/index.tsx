@@ -2,6 +2,25 @@ import * as React from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+
+interface LocaleLinkProps {
+  locale?: string;
+}
+
+function LocaleLink({ locale }: LocaleLinkProps) {
+  const router = useRouter();
+
+  if (router.locale === locale) {
+    return <a className="text-black font-bold">{locale}</a>;
+  }
+
+  return (
+    <Link href="/" locale={locale}>
+      <a className="text-brand-purple underline">{locale}</a>
+    </Link>
+  );
+}
 
 const IndexPage: NextPage = () => {
   return (
@@ -12,21 +31,9 @@ const IndexPage: NextPage = () => {
 
       <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
         <div className="space-y-4">
-          <ul>
-            <li>
-              <Link href="/" locale="en-US">
-                <a className="text-brand-purple underline">en</a>
-              </Link>{' '}
-              |{' '}
-              <Link href="/" locale="fr">
-                <a className="text-brand-purple underline">fr</a>
-              </Link>{' '}
-              |{' '}
-              <Link href="/" locale="id">
-                <a className="text-brand-purple underline">id</a>
-              </Link>
-            </li>
-          </ul>
+          <div>
+            <LocaleLink locale="en" /> | <LocaleLink locale="fr" /> | <LocaleLink locale="id" />
+          </div>
           <ul>
             <li>
               <Link href="/scenes/welcome-screen">

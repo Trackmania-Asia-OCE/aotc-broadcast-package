@@ -1,3 +1,6 @@
+import { GetStaticPropsContext } from 'next';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import * as React from 'react';
 import { SceneContent } from '~/components/ui/scene-content';
 import { SceneFooter } from '~/components/ui/scene-footer';
@@ -8,7 +11,16 @@ import { useDoubleCommentators } from '~/modules/commentary-booth/hooks';
 import { useLatestResults } from '~/modules/matches/hooks';
 import { ResultsListItem, ResultsBox } from '~/modules/players/components';
 
+export async function getStaticProps({ locale }: GetStaticPropsContext) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? 'en', ['common'])),
+    },
+  };
+}
+
 export default function CommentaryBoothDoubleWithResultsScene() {
+  const { t } = useTranslation('common');
   const { data: commentator } = useDoubleCommentators();
   const { data: results } = useLatestResults();
 
@@ -23,7 +35,7 @@ export default function CommentaryBoothDoubleWithResultsScene() {
           />
           <div className="flex flex-col items-center space-y-6 w-[550px]">
             <p className="text-white text-[32px] leading-[38px] text-center font-brand uppercase tracking-brand-wide -mr-[0.25em]">
-              Latest Result
+              {t('commentary-booth.results-title')}
             </p>
             <ResultsListItem
               className="w-full"
@@ -60,7 +72,7 @@ export default function CommentaryBoothDoubleWithResultsScene() {
           />
         </div>
       </SceneContent>
-      <SceneFooter footerText="Commentary Booth" />
+      <SceneFooter footerText={t('commentary-booth.footer-text')} />
     </Screen>
   );
 }

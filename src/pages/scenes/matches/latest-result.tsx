@@ -1,3 +1,6 @@
+import { GetStaticPropsContext } from 'next';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import * as React from 'react';
 import { SceneContent } from '~/components/ui/scene-content';
 import { SceneFooter } from '~/components/ui/scene-footer';
@@ -6,7 +9,16 @@ import { Screen } from '~/components/ui/screen';
 import { useLatestResults } from '~/modules/matches/hooks';
 import { ResultsListItem, ResultsBox } from '~/modules/players/components';
 
+export async function getStaticProps({ locale }: GetStaticPropsContext) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? 'en', ['common'])),
+    },
+  };
+}
+
 export default function LatestResultsScene() {
+  const { t } = useTranslation('common');
   const { data } = useLatestResults();
 
   return (
@@ -15,7 +27,7 @@ export default function LatestResultsScene() {
       <SceneContent className="flex items-center justify-center">
         <div className="flex flex-col items-center space-y-6 w-[600px]">
           <p className="text-white text-[32px] leading-[38px] text-center font-brand uppercase tracking-brand-wide -mr-[0.25em]">
-            Latest Result
+            {t('latest-result.title')}
           </p>
           <ResultsListItem
             className="w-full"
@@ -47,7 +59,7 @@ export default function LatestResultsScene() {
           </ResultsListItem>
         </div>
       </SceneContent>
-      <SceneFooter footerText="Next Match" />
+      <SceneFooter footerText={t('latest-result.footer-text')} />
     </Screen>
   );
 }
