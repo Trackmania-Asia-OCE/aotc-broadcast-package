@@ -1,0 +1,40 @@
+{
+  "welcome-screen": {
+    "title": "Bienvenue",
+    "subtitle": "Début du stream",
+    "footer-text": "Début"
+  },
+  "end-screen": {
+    "title": "À bientôt !",
+    "subtitle": "Fin du stream",
+    "footer-text": "Fin"
+  },
+  "player-card": {
+    "title": "Infos",
+    "footer-text": "Informations joueur"
+  },
+  "commentary-booth": {
+    "results-title": "Dernier résultat",
+    "footer-text": "Cabine Commentateur"
+  },
+  "intermission": {
+    "return-in-text": "Prochain match dans",
+    "footer-text": "Pause"
+  },
+  "latest-result": {
+    "title": "Dernier résultat",
+    "footer-text": "Résultats"
+  },
+  "next-match-warmup": {
+    "title": "Joueurs",
+    "footer-text": "Prochain match"
+  },
+  "winner-circle": {
+    "title": "Vainqueurs AOTC",
+    "first": "1er",
+    "second": "2ème",
+    "third": "3ème",
+    "fourth": "4ème",
+    "footer-text": "Résultat final"
+  }
+}
