@@ -1,0 +1,40 @@
+{
+  "welcome-screen": {
+    "title": "Welcome",
+    "subtitle": "Stream Starting",
+    "footer-text": "Intermission"
+  },
+  "end-screen": {
+    "title": "See You Soon",
+    "subtitle": "Stream Ending",
+    "footer-text": "Intermission"
+  },
+  "player-card": {
+    "title": "Info",
+    "footer-text": "Player Information"
+  },
+  "commentary-booth": {
+    "results-title": "Latest Result",
+    "footer-text": "Commentary Booth"
+  },
+  "intermission": {
+    "return-in-text": "Next match in",
+    "footer-text": "Intermission"
+  },
+  "latest-result": {
+    "title": "Latest Result",
+    "footer-text": "Intermission"
+  },
+  "next-match-warmup": {
+    "title": "Players",
+    "footer-text": "Next Match"
+  },
+  "winner-circle": {
+    "title": "AOTC Winners",
+    "first": "1st",
+    "second": "2nd",
+    "third": "3rd",
+    "fourth": "4th",
+    "footer-text": "Winner Circle"
+  }
+}

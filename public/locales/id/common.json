@@ -1,0 +1,40 @@
+{
+  "welcome-screen": {
+    "title": "Selamat Datang",
+    "subtitle": "Siaran Dimulai",
+    "footer-text": "Intermission"
+  },
+  "end-screen": {
+    "title": "Sampai Jumpa",
+    "subtitle": "Siaran Berakhir",
+    "footer-text": "Intermission"
+  },
+  "player-card": {
+    "title": "Info",
+    "footer-text": "Informasi Pemain"
+  },
+  "commentary-booth": {
+    "results-title": "Hasil Terakhir",
+    "footer-text": "Ruang Komentator"
+  },
+  "intermission": {
+    "return-in-text": "Next match in",
+    "footer-text": "Intermission"
+  },
+  "latest-result": {
+    "title": "Hasil Terakhir",
+    "footer-text": "Intermission"
+  },
+  "next-match-warmup": {
+    "title": "Daftar Pemain",
+    "footer-text": "Pertandingan Selanjutnya"
+  },
+  "winner-circle": {
+    "title": "Pemenang AOTC",
+    "first": "1st",
+    "second": "2nd",
+    "third": "3rd",
+    "fourth": "4th",
+    "footer-text": "Winner Circle"
+  }
+}

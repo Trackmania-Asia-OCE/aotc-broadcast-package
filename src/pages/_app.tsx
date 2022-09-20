@@ -1,13 +1,15 @@
 import * as React from 'react';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
+import { appWithTranslation } from 'next-i18next';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import nextI18NextConfig from '../../next-i18next.config.js';
 
 import '~/styles/globals.css';
 
 const queryClient = new QueryClient();
 
-export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <QueryClientProvider client={queryClient}>
       <Head>
@@ -18,3 +20,5 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
     </QueryClientProvider>
   );
 }
+
+export default appWithTranslation(MyApp, nextI18NextConfig);
