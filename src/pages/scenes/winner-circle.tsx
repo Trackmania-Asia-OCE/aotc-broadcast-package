@@ -34,28 +34,28 @@ export default function LatestResultsScene() {
             nationality={data?.[0].country ?? ''}
             playerName={data?.[0].name ?? ''}
           >
-            <ResultsBox colorScheme="first">={t('winner-circle.first')}</ResultsBox>
+            <ResultsBox colorScheme="first">{t('winner-circle.first')}</ResultsBox>
           </ResultsListItem>
           <ResultsListItem
             className="w-full"
             nationality={data?.[1].country ?? ''}
             playerName={data?.[1].name ?? ''}
           >
-            <ResultsBox colorScheme="second">={t('winner-circle.second')}</ResultsBox>
+            <ResultsBox colorScheme="second">{t('winner-circle.second')}</ResultsBox>
           </ResultsListItem>
           <ResultsListItem
             className="w-full"
             nationality={data?.[2].country ?? ''}
             playerName={data?.[2].name ?? ''}
           >
-            <ResultsBox colorScheme="third">={t('winner-circle.third')}</ResultsBox>
+            <ResultsBox colorScheme="third">{t('winner-circle.third')}</ResultsBox>
           </ResultsListItem>
           <ResultsListItem
             className="w-full"
             nationality={data?.[3].country ?? ''}
             playerName={data?.[3].name ?? ''}
           >
-            <ResultsBox colorScheme="fourth">={t('winner-circle.fourth')}</ResultsBox>
+            <ResultsBox colorScheme="fourth">{t('winner-circle.fourth')}</ResultsBox>
           </ResultsListItem>
         </div>
       </SceneContent>

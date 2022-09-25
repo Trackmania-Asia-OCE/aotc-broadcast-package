@@ -60,7 +60,7 @@ export default function IntermissionScent() {
           <p className="text-white text-[32px] font-brand tracking-brand-wide uppercase">
             {t('intermission.return-in-text')}
           </p>
-          <div className="flex items-center justify-center w-[400px] h-[100px] bg-brand-purple text-brand-turquoise">
+          <div className="flex items-center justify-center w-[400px] h-[100px] bg-brand-further-red text-brand-white">
             {isMounted ? CountdownTimer : null}
           </div>
         </div>

@@ -37,7 +37,7 @@ function getColorScheme(variant: ResultsColorSchemes = 'default') {
       return 'border-brand-bronze text-brand-bronze';
     }
     case 'fourth': {
-      return 'border-brand-turquoise text-brand-turquoise';
+      return 'border-brand-white text-brand-white';
     }
     default: {
       return 'border-white text-white';

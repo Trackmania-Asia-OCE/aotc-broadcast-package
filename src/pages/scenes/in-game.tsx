@@ -9,9 +9,7 @@ export default function InGameScene() {
 
   return (
     <Screen>
-      <SceneHeader>
-        <CurrentGame game={isLoading ? '' : data?.current ?? ''} />
-      </SceneHeader>
+      <SceneHeader currentRound={<CurrentGame game={isLoading ? '' : data?.current ?? ''} />} />
     </Screen>
   );
 }
