@@ -23,7 +23,7 @@ export const Screen = React.forwardRef<HTMLDivElement, ScreenProps>(
             'flex flex-col flex-1',
             gradient === 'to-right' && 'bg-gradient-to-r',
             gradient === 'to-left' && 'bg-gradient-to-l',
-            gradient && 'from-transparent to-[#0A0613]'
+            gradient && 'from-transparent to-black'
           )}
         >
           {children}
