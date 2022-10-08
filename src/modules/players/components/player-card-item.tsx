@@ -17,10 +17,10 @@ export function PlayerCardItem({
 }: PlayerCardItemProps) {
   return (
     <div className={clsx('grid grid-cols-item-card', className)} {...rest}>
-      <div className="flex items-center justify-center w-[100px] h-[100px] flex-shrink-0 bg-white text-brand-purple">
+      <div className="flex items-center justify-center w-[100px] h-[100px] flex-shrink-0 bg-white text-brand-further-red">
         {icon}
       </div>
-      <div className="flex items-center justify-start min-w-0 px-9 h-[100px] bg-brand-purple text-brand-turquoise">
+      <div className="flex items-center justify-start min-w-0 px-9 h-[100px] bg-brand-further-red text-brand-white">
         <p
           className={clsx(
             isMultiline ? 'text-xl leading-6 line-clamp-2' : 'text-2xl leading-7 truncate',

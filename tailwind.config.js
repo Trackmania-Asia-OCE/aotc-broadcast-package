@@ -8,6 +8,8 @@ module.exports = {
         'brand-turquoise': '#0BDBD4',
         'brand-purple': '#352166',
         'brand-black': '#0A0613',
+        'brand-white': '#E5E5E5',
+        'brand-further-red': '#F20544',
         'brand-green': '#00FF75',
         'brand-red': '#F0386B',
         'brand-gold': '#FFD600',

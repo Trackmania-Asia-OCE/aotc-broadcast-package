@@ -8,7 +8,7 @@ export function SceneFooter({ footerText, className, ...rest }: SceneFooterProps
   return (
     <footer className="flex flex-row items-start justify-between px-[101px] pb-[97px]" {...rest}>
       <div>
-        <p className="font-brand uppercase tracking-brand-wide text-white">AOTC: Spring 2022</p>
+        <p className="font-brand uppercase tracking-brand-wide text-white">AOTC: Fall 2022</p>
       </div>
       <div className="ml-12">
         <p className="font-brand uppercase tracking-brand-wide text-white">{footerText}</p>
