@@ -12,7 +12,7 @@ export const Screen = React.forwardRef<HTMLDivElement, ScreenProps>(
       <main
         className={clsx(
           'flex flex-col w-full min-w-full h-full min-h-screen',
-          withBackground && 'bg-black bg-opacity-25',
+          withBackground && 'bg-black bg-opacity-30',
           className
         )}
         ref={ref}

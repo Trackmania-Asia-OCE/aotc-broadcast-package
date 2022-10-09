@@ -14,7 +14,7 @@ module.exports = {
         'brand-red': '#F0386B',
         'brand-gold': '#FFD600',
         'brand-silver': '#B9B9B9',
-        'brand-bronze': '#D36202',
+        'brand-bronze': '#FF7500',
       },
       letterSpacing: {
         'brand-wide': '0.25em',
