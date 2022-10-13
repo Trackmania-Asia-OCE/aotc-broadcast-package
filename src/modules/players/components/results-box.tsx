@@ -56,6 +56,7 @@ export function ResultsBox({
     <div
       className={clsx(
         'flex items-center justify-center border-4',
+        'bg-brand-black bg-opacity-25',
         variant === 'short' ? 'w-[50px] h-[100px]' : 'w-[100px] h-[100px]',
         getColorScheme(colorScheme),
         className

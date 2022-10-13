@@ -56,7 +56,7 @@ export default function IntermissionScent() {
     <Screen className="bg-black bg-opacity-25">
       <SceneHeader />
       <SceneContent className="flex items-center justify-center">
-        <div className="space-y-3 text-center">
+        <div className="flex flex-col items-center space-y-3 text-center">
           <p className="text-white text-[32px] font-brand tracking-brand-wide uppercase">
             {t('intermission.return-in-text')}
           </p>
