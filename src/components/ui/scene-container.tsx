@@ -7,7 +7,7 @@ export const SceneContainer = React.forwardRef<HTMLDivElement, SceneContainerPro
   ({ children, className, ...rest }, ref) => {
     return (
       <div
-        className={clsx('flex flex-col w-full min-w-full h-full flex-1', className)}
+        className={clsx('flex flex-col w-full min-w-full h-full flex-1 relative', className)}
         ref={ref}
         {...rest}
       >

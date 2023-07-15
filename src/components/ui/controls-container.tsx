@@ -8,7 +8,7 @@ export const ControlsContainer = React.forwardRef<HTMLDivElement, ControlsContai
     return (
       <div
         className={clsx(
-          'flex flex-col w-full min-w-full h-full border-t-4 border-t-screen-red border-dashed',
+          'flex flex-col justify-end w-full min-w-full h-full border-t-4 border-t-screen-red border-dashed p-6',
           className
         )}
         ref={ref}
