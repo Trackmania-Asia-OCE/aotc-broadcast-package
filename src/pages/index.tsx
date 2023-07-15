@@ -16,8 +16,8 @@ function LocaleLink({ locale }: LocaleLinkProps) {
   }
 
   return (
-    <Link href="/" locale={locale}>
-      <a className="text-brand-purple underline">{locale}</a>
+    <Link href="/" locale={locale} className="text-brand-purple underline">
+      {locale}
     </Link>
   );
 }
@@ -36,81 +36,90 @@ const IndexPage: NextPage = () => {
           </div>
           <ul>
             <li>
-              <Link href="/scenes/welcome-screen">
-                <a className="text-brand-purple underline">Welcome Screen</a>
+              <Link href="/scenes/welcome-screen" className="text-brand-purple underline">
+                Welcome Screen
               </Link>
             </li>
             <li>
-              <Link href="/scenes/end-screen">
-                <a className="text-brand-purple underline">End Screen</a>
+              <Link href="/scenes/end-screen" className="text-brand-purple underline">
+                End Screen
               </Link>
             </li>
             <li>
-              <Link href="/scenes/empty">
-                <a className="text-brand-purple underline">Empty</a>
+              <Link href="/scenes/empty" className="text-brand-purple underline">
+                Empty
               </Link>
             </li>
             <li>
-              <Link href="/scenes/empty-75p">
-                <a className="text-brand-purple underline">Empty (75% opacity)</a>
-              </Link>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <Link href="/scenes/matches/intermission">
-                <a className="text-brand-purple underline">Intermission</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/scenes/matches/next-match-warmup">
-                <a className="text-brand-purple underline">Next Match (Warmup)</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/scenes/in-game">
-                <a className="text-brand-purple underline">In Game</a>
+              <Link href="/scenes/empty-bg" className="text-brand-purple underline">
+                Empty (with background)
               </Link>
             </li>
           </ul>
           <ul>
             <li>
-              <Link href="/scenes/commentary-booth/single">
-                <a className="text-brand-purple underline">Commentary Booth (Single)</a>
+              <Link href="/scenes/matches/intermission" className="text-brand-purple underline">
+                Intermission
               </Link>
             </li>
             <li>
-              <Link href="/scenes/commentary-booth/double">
-                <a className="text-brand-purple underline">Commentary Booth (Double)</a>
+              <Link
+                href="/scenes/matches/next-match-warmup"
+                className="text-brand-purple underline"
+              >
+                Next Match (Warmup)
               </Link>
             </li>
             <li>
-              <Link href="/scenes/matches/latest-result">
-                <a className="text-brand-purple underline">Latest Result</a>
-              </Link>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <Link href="/scenes/commentary-booth/single-results">
-                <a className="text-brand-purple underline">Results + Commentary (Single)</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/scenes/commentary-booth/double-results">
-                <a className="text-brand-purple underline">Results + Commentary (Double)</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/scenes/winner-circle">
-                <a className="text-brand-purple underline">Winner Circle</a>
+              <Link href="/scenes/in-game" className="text-brand-purple underline">
+                In Game
               </Link>
             </li>
           </ul>
           <ul>
             <li>
-              <Link href="/scenes/player-card">
-                <a className="text-brand-purple underline">Player Card</a>
+              <Link href="/scenes/commentary-booth/single" className="text-brand-purple underline">
+                Commentary Booth (Single)
+              </Link>
+            </li>
+            <li>
+              <Link href="/scenes/commentary-booth/double" className="text-brand-purple underline">
+                Commentary Booth (Double)
+              </Link>
+            </li>
+            <li>
+              <Link href="/scenes/matches/latest-result" className="text-brand-purple underline">
+                Latest Result
+              </Link>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <Link
+                href="/scenes/commentary-booth/single-results"
+                className="text-brand-purple underline"
+              >
+                Results + Commentary (Single)
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/scenes/commentary-booth/double-results"
+                className="text-brand-purple underline"
+              >
+                Results + Commentary (Double)
+              </Link>
+            </li>
+            <li>
+              <Link href="/scenes/winner-circle" className="text-brand-purple underline">
+                Winner Circle
+              </Link>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <Link href="/scenes/player-card" className="text-brand-purple underline">
+                Player Card
               </Link>
             </li>
           </ul>

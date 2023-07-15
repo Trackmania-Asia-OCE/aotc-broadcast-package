@@ -2,9 +2,12 @@ import { GetStaticPropsContext } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import * as React from 'react';
+import { AOTC2023IntermissionBlock } from '~/components/aotc-2023/intermission-block';
+import { AOTC2023SceneFooter } from '~/components/aotc-2023/scene-footer';
+import { AOTC2023SceneHeader } from '~/components/aotc-2023/scene-header';
+import { ControlsContainer } from '~/components/ui/controls-container';
+import { SceneContainer } from '~/components/ui/scene-container';
 import { SceneContent } from '~/components/ui/scene-content';
-import { SceneFooter } from '~/components/ui/scene-footer';
-import { SceneHeader } from '~/components/ui/scene-header';
 import { Screen } from '~/components/ui/screen';
 
 export async function getStaticProps({ locale }: GetStaticPropsContext) {
@@ -20,18 +23,17 @@ export default function WelcomeScreenScene() {
 
   return (
     <Screen withBackground>
-      <SceneHeader />
-      <SceneContent className="flex items-center justify-end">
-        <div className="text-right">
-          <h1 className="text-white text-[128px] leading-[154px] font-brand uppercase truncate tracking-brand-wide -mr-[0.25em]">
-            {t('welcome-screen.title')}
-          </h1>
-          <p className="text-white text-[20px] leading-[24px] font-brand uppercase truncate tracking-brand-wide -mr-[0.25em]">
-            {t('welcome-screen.subtitle')}
-          </p>
-        </div>
-      </SceneContent>
-      <SceneFooter footerText={t('welcome-screen.footer-text')} />
+      <SceneContainer>
+        <AOTC2023SceneHeader />
+        <SceneContent className="flex items-center justify-start">
+          <AOTC2023IntermissionBlock
+            title={t('welcome-screen.title')}
+            subtitle={t('welcome-screen.subtitle')}
+          />
+        </SceneContent>
+        <AOTC2023SceneFooter />
+      </SceneContainer>
+      <ControlsContainer />
     </Screen>
   );
 }

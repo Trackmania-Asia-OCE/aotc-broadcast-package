@@ -5,6 +5,7 @@ import { appWithTranslation } from 'next-i18next';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import nextI18NextConfig from '../../next-i18next.config.js';
 
+import '~/styles/fonts.css';
 import '~/styles/globals.css';
 
 const queryClient = new QueryClient();

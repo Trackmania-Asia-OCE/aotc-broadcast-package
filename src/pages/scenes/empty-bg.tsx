@@ -4,9 +4,9 @@ import { ControlsContainer } from '~/components/ui/controls-container';
 import { SceneContainer } from '~/components/ui/scene-container';
 import { Screen } from '~/components/ui/screen';
 
-export default function EmptyScene() {
+export default function EmptyOpacityScene() {
   return (
-    <Screen>
+    <Screen withBackground>
       <SceneContainer>
         <AOTC2023SceneHeader />
       </SceneContainer>

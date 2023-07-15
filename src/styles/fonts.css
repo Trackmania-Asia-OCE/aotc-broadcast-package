@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'TASA Orbiter';
+  src: url('/static/fonts/TASAOrbiterVF.woff2') format('woff2-variations');
+  font-stretch: 25% 150%;
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
