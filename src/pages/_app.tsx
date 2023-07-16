@@ -3,6 +3,7 @@ import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { appWithTranslation } from 'next-i18next';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import { trpc } from '~/utils/trpc';
 import nextI18NextConfig from '../../next-i18next.config.js';
 
 import '~/styles/fonts.css';
@@ -22,4 +23,4 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   );
 }
 
-export default appWithTranslation(MyApp, nextI18NextConfig);
+export default trpc.withTRPC(appWithTranslation(MyApp, nextI18NextConfig));
