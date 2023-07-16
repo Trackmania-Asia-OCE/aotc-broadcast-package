@@ -7,6 +7,7 @@ import { Screen } from '~/components/ui/screen';
 import { ControlsCard } from '~/modules/controls/controls-card';
 import { CurrentMatch } from '~/modules/in-game/current-match';
 import { useInGameSceneStore } from '~/modules/in-game/in-game-scene-store';
+import { PlayerSelect } from '~/modules/in-game/player-select';
 
 export default function InGameScene() {
   const currentMatch = useInGameSceneStore(state => state.currentMatch);
@@ -24,10 +25,10 @@ export default function InGameScene() {
             <h2 className="text-base font-semibold leading-7 text-gray-900">Settings</h2>
           </div>
           <div className="p-4 sm:px-6">
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-6">
               <CurrentMatch />
               <div>Current map (TODO)</div>
-              <div>Current player</div>
+              <PlayerSelect />
             </div>
           </div>
           <div className="bg-gray-50 px-4 py-2 sm:px-6">
