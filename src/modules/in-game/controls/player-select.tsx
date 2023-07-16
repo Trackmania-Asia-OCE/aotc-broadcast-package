@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import { useRouter } from 'next/router';
 import * as React from 'react';
 import { trpc } from '~/utils/trpc';
-import { useInGameSceneStore } from './in-game-scene-store';
+import { useInGameSceneStore } from '../in-game-scene-store';
 
 export function PlayerSelect() {
   const router = useRouter();

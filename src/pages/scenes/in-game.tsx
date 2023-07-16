@@ -4,19 +4,26 @@ import { AOTC2023InGameOverlay } from '~/components/aotc-2023/in-game-overlay';
 import { ControlsContainer } from '~/components/ui/controls-container';
 import { SceneContainer } from '~/components/ui/scene-container';
 import { Screen } from '~/components/ui/screen';
+import ToggleSwitch from '~/components/ui/toggle-switch';
 import { ControlsCard } from '~/modules/controls/controls-card';
-import { CurrentMatch } from '~/modules/in-game/current-match';
+import { CurrentMatch } from '~/modules/in-game/controls/current-match';
+import { PlayerSelect } from '~/modules/in-game/controls/player-select';
 import { useInGameSceneStore } from '~/modules/in-game/in-game-scene-store';
-import { PlayerSelect } from '~/modules/in-game/player-select';
+import MapCard from '~/modules/in-game/map-card';
+import PlayerCard from '~/modules/in-game/player-card';
 
 export default function InGameScene() {
   const currentMatch = useInGameSceneStore(state => state.currentMatch);
+  const showable = useInGameSceneStore(state => state.showable);
+  const setShowable = useInGameSceneStore(state => state.setShowable);
 
   return (
     <Screen>
       <SceneContainer>
         <AOTC2023InGameOverlay>
           <AOTC2023CurrentMatch currentMatch={currentMatch} />
+          <PlayerCard open={showable === 'player-card'} onClose={() => setShowable(undefined)} />
+          <MapCard open={showable === 'map-card'} onClose={() => setShowable(undefined)} />
         </AOTC2023InGameOverlay>
       </SceneContainer>
       <ControlsContainer>
@@ -35,10 +42,30 @@ export default function InGameScene() {
             <h2 className="text-base font-semibold leading-7 text-gray-900">Showables</h2>
           </div>
           <div className="p-4 sm:px-6">
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center justify-end space-x-4">
               <div>Map Records (TODO)</div>
-              <div>Player Card</div>
-              <div>Map Card</div>
+              <ToggleSwitch
+                label="Map Card"
+                enabled={showable === 'map-card'}
+                setEnabled={checked => {
+                  if (checked) {
+                    setShowable('map-card');
+                  } else {
+                    setShowable(undefined);
+                  }
+                }}
+              />
+              <ToggleSwitch
+                label="Player Card"
+                enabled={showable === 'player-card'}
+                setEnabled={checked => {
+                  if (checked) {
+                    setShowable('player-card');
+                  } else {
+                    setShowable(undefined);
+                  }
+                }}
+              />
             </div>
           </div>
         </ControlsCard>

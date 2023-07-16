@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useInGameSceneStore } from './in-game-scene-store';
+import { useInGameSceneStore } from '../in-game-scene-store';
 
 export function CurrentMatch() {
   const currentMatch = useInGameSceneStore(state => state.currentMatch);
