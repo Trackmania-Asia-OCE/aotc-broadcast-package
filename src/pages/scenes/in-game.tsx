@@ -4,13 +4,13 @@ import { AOTC2023InGameOverlay } from '~/components/aotc-2023/in-game-overlay';
 import { ControlsContainer } from '~/components/ui/controls-container';
 import { SceneContainer } from '~/components/ui/scene-container';
 import { Screen } from '~/components/ui/screen';
-import ToggleSwitch from '~/components/ui/toggle-switch';
+import { ToggleSwitch } from '~/components/ui/toggle-switch';
 import { ControlsCard } from '~/modules/controls/controls-card';
 import { CurrentMatch } from '~/modules/in-game/controls/current-match';
 import { PlayerSelect } from '~/modules/in-game/controls/player-select';
-import { useInGameSceneStore } from '~/modules/in-game/in-game-scene-store';
-import MapCard from '~/modules/in-game/map-card';
-import PlayerCard from '~/modules/in-game/player-card';
+import { useInGameSceneStore } from '~/modules/in-game/store';
+import { MapCard } from '~/modules/in-game/components/map-card';
+import { PlayerCard } from '~/modules/in-game/components/player-card';
 
 export default function InGameScene() {
   const currentMatch = useInGameSceneStore(state => state.currentMatch);

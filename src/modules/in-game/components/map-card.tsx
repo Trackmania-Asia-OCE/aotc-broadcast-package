@@ -6,7 +6,7 @@ export interface MapCardProps {
   onClose?: (value: boolean) => void;
 }
 
-export default function MapCard({ open, onClose }: MapCardProps) {
+export function MapCard({ open, onClose }: MapCardProps) {
   const handleClose = (value: boolean) => {
     if (onClose) {
       onClose(value);
@@ -21,10 +21,10 @@ export default function MapCard({ open, onClose }: MapCardProps) {
             <div className="pointer-events-none fixed inset-y-0 left-0 flex max-w-full pr-10">
               <Transition.Child
                 as={React.Fragment}
-                enter="transform transition ease-in-out duration-500 sm:duration-700"
+                enter="transform transition ease-in-out duration-500"
                 enterFrom="-translate-x-full"
                 enterTo="translate-x-0"
-                leave="transform transition ease-in-out duration-500 sm:duration-700"
+                leave="transform transition ease-in-out duration-500"
                 leaveFrom="translate-x-0"
                 leaveTo="-translate-x-full"
               >

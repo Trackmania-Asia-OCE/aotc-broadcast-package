@@ -1,52 +1,26 @@
-import clsx from 'clsx';
 import * as React from 'react';
-import { ResultsListItem } from '../../players/components/results-list-item';
+import clsx from 'clsx';
+import * as styles from './commentary-box.css';
 
 export interface CommentaryBoxProps {
   nationality: string;
-  commentatorName: string;
-  size?: 'md' | 'lg' | 'xl';
+  name: string;
+  handle?: string;
 }
 
-export function CommentaryBox({ nationality, commentatorName, size = 'md' }: CommentaryBoxProps) {
-  const renderBoxStyles = () => {
-    switch (size) {
-      case 'xl': {
-        return 'w-[840px]';
-      }
-      case 'lg': {
-        return 'w-[654px]';
-      }
-      case 'md': {
-        return 'w-[500px]';
-      }
-      default: {
-        return 'w-[500px]';
-      }
-    }
-  };
-
-  const renderCameraStyles = () => {
-    switch (size) {
-      case 'xl': {
-        return 'h-[471px]';
-      }
-      case 'lg': {
-        return 'h-[367px]';
-      }
-      case 'md': {
-        return 'h-[281px]';
-      }
-      default: {
-        return 'h-[281px]';
-      }
-    }
-  };
-
+export function CommentaryBox({ nationality, name, handle }: CommentaryBoxProps) {
   return (
-    <div className={clsx('flex-shrink-0 border-t-4 border-white', renderBoxStyles())}>
-      <div className={renderCameraStyles()} />
-      <ResultsListItem nationality={nationality} playerName={commentatorName} />
+    <div className="flex-shrink-0">
+      <div className="border-4 border-white w-[750px] h-[400px]" />
+      <div className="flex flex-row">
+        <div className="flex items-center justify-center w-[75px] h-[75px] bg-white text-black">
+          <p className={clsx('font-brand uppercase font-bold', styles.country)}>{nationality}</p>
+        </div>
+        <div className="flex flex-col items-start justify-center flex-1 px-4 min-w-0 h-[75px] bg-black/25 text-white space-y-2">
+          <p className={clsx('font-brand uppercase font-bold', styles.name)}>{name}</p>
+          <p className={clsx('font-brand uppercase font-medium', styles.handle)}>{handle}</p>
+        </div>
+      </div>
     </div>
   );
 }

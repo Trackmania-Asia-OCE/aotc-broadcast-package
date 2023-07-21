@@ -18,7 +18,7 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
   };
 }
 
-export default function WelcomeScreenScene() {
+export default function IntermissionScene() {
   const { t } = useTranslation('common');
 
   return (
@@ -27,8 +27,8 @@ export default function WelcomeScreenScene() {
         <AOTC2023SceneHeader />
         <SceneContent className="flex items-center justify-start">
           <AOTC2023IntermissionBlock
-            title={t('end-screen.title')}
-            subtitle={t('end-screen.subtitle')}
+            title={t('intermission.title')}
+            subtitle={t('intermission.subtitle')}
           />
         </SceneContent>
         <AOTC2023SceneFooter footerText={t('scene.footer-text')} />

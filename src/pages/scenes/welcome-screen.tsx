@@ -31,7 +31,7 @@ export default function WelcomeScreenScene() {
             subtitle={t('welcome-screen.subtitle')}
           />
         </SceneContent>
-        <AOTC2023SceneFooter />
+        <AOTC2023SceneFooter footerText={t('scene.footer-text')} />
       </SceneContainer>
       <ControlsContainer />
     </Screen>

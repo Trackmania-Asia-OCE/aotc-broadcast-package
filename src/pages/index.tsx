@@ -41,10 +41,17 @@ const IndexPage: NextPage = () => {
               </Link>
             </li>
             <li>
+              <Link href="/scenes/intermission" className="text-brand-purple underline">
+                Intermission
+              </Link>
+            </li>
+            <li>
               <Link href="/scenes/end-screen" className="text-brand-purple underline">
                 End Screen
               </Link>
             </li>
+          </ul>
+          <ul>
             <li>
               <Link href="/scenes/empty" className="text-brand-purple underline">
                 Empty
@@ -57,11 +64,6 @@ const IndexPage: NextPage = () => {
             </li>
           </ul>
           <ul>
-            <li>
-              <Link href="/scenes/matches/intermission" className="text-brand-purple underline">
-                Intermission
-              </Link>
-            </li>
             <li>
               <Link
                 href="/scenes/matches/next-match-warmup"
@@ -90,36 +92,6 @@ const IndexPage: NextPage = () => {
             <li>
               <Link href="/scenes/matches/latest-result" className="text-brand-purple underline">
                 Latest Result
-              </Link>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <Link
-                href="/scenes/commentary-booth/single-results"
-                className="text-brand-purple underline"
-              >
-                Results + Commentary (Single)
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/scenes/commentary-booth/double-results"
-                className="text-brand-purple underline"
-              >
-                Results + Commentary (Double)
-              </Link>
-            </li>
-            <li>
-              <Link href="/scenes/winner-circle" className="text-brand-purple underline">
-                Winner Circle
-              </Link>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <Link href="/scenes/player-card" className="text-brand-purple underline">
-                Player Card
               </Link>
             </li>
           </ul>

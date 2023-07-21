@@ -8,7 +8,7 @@ export interface ToggleSwitchProps {
   setEnabled?: (checked: boolean) => void;
 }
 
-export default function ToggleSwitch({ label, enabled, setEnabled }: ToggleSwitchProps) {
+export function ToggleSwitch({ label, enabled, setEnabled }: ToggleSwitchProps) {
   return (
     <Switch.Group as="div" className="flex items-center space-x-2">
       <Switch.Label as="span" className="text-sm font-medium leading-6 text-gray-900" passive>

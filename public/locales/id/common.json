@@ -1,7 +1,10 @@
 {
+  "scene": {
+    "footer-text": "Premiere Asia/OCE TM Tournament"
+  },
   "welcome-screen": {
-    "title": "Selamat Datang",
-    "subtitle": "Siaran Dimulai",
+    "title": "Siaran Dimulai",
+    "subtitle": "Selamat Datang",
     "footer-text": "Intermission"
   },
   "end-screen": {
@@ -14,10 +17,12 @@
     "footer-text": "Informasi Pemain"
   },
   "commentary-booth": {
-    "results-title": "Hasil Terakhir",
-    "footer-text": "Ruang Komentator"
+    "header-text": "Ruang Komentator",
+    "results-title": "Hasil Terakhir"
   },
   "intermission": {
+    "title": "Kami akan kembali!",
+    "subtitle": "Intermission",
     "return-in-text": "Next match in",
     "footer-text": "Intermission"
   },

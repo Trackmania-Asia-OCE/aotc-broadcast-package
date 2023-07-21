@@ -1,11 +1,14 @@
 {
+  "scene": {
+    "footer-text": "Premiere Asia/OCE TM Tournament"
+  },
   "welcome-screen": {
-    "title": "Welcome",
-    "subtitle": "Stream Starting",
+    "title": "Starting Soon",
+    "subtitle": "Welcome",
     "footer-text": "Intermission"
   },
   "end-screen": {
-    "title": "See You Soon",
+    "title": "Thanks for Watching!",
     "subtitle": "Stream Ending",
     "footer-text": "Intermission"
   },
@@ -14,10 +17,12 @@
     "footer-text": "Player Information"
   },
   "commentary-booth": {
-    "results-title": "Latest Result",
-    "footer-text": "Commentary Booth"
+    "header-text": "Commentary Booth",
+    "results-title": "Latest Result"
   },
   "intermission": {
+    "title": "We'll be back!",
+    "subtitle": "Intermission",
     "return-in-text": "Next match in",
     "footer-text": "Intermission"
   },

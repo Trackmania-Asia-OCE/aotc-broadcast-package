@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import { useInGameSceneStore } from './in-game-scene-store';
+import { useInGameSceneStore } from '../store';
 
 export interface PlayerCardProps {
   open?: boolean;
   onClose?: (value: boolean) => void;
 }
 
-export default function PlayerCard({ open, onClose }: PlayerCardProps) {
+export function PlayerCard({ open, onClose }: PlayerCardProps) {
   const selectedPlayer = useInGameSceneStore(state => state.selectedPlayer);
 
   const handleClose = (value: boolean) => {
@@ -24,10 +24,10 @@ export default function PlayerCard({ open, onClose }: PlayerCardProps) {
             <div className="pointer-events-none fixed inset-y-0 left-0 flex max-w-full pr-10">
               <Transition.Child
                 as={React.Fragment}
-                enter="transform transition ease-in-out duration-500 sm:duration-700"
+                enter="transform transition ease-in-out duration-500"
                 enterFrom="-translate-x-full"
                 enterTo="translate-x-0"
-                leave="transform transition ease-in-out duration-500 sm:duration-700"
+                leave="transform transition ease-in-out duration-500"
                 leaveFrom="translate-x-0"
                 leaveTo="-translate-x-full"
               >
