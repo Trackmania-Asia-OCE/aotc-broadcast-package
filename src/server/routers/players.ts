@@ -14,21 +14,23 @@ export const playersRouter = router({
     )
     .query(async () => {
       try {
-        const sheet = await getGoogleSheetById(1194987725);
+        const playersSheetId = process.env.GOOGLE_SHEETS_PLAYERS_SHEET_ID ?? '0';
+        const sheet = await getGoogleSheetById(Number(playersSheetId));
         const playersRows = await sheet.getRows<PlayerDataSpreadsheet>();
 
         const players: PlayerData[] = [];
 
         for (const row of playersRows) {
           players.push({
+            accountId: row.get('Trackmania Account ID'),
             nickname: row.get('Nickname'),
             realName: row.get('Real Name'),
-            age: row.get('Age'),
             country: row.get('Country'),
-            inputDevice: row.get('Input Device'),
-            camera: row.get('Preferred Cam'),
-            preferredStyle: row.get('Preferred Surface'),
-            bestResult: row.get('Best Results'),
+            inputDevice: row.get('Input device'),
+            inputDeviceModel: row.get('Input device model'),
+            camera: row.get('Preferred camera'),
+            preferredStyle: row.get('Preferred map style'),
+            lastResult: row.get('Last AOTC result'),
           });
         }
 

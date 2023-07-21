@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Dialog, Transition } from '@headlessui/react';
+import { useInGameSceneStore } from './in-game-scene-store';
 
 export interface PlayerCardProps {
   open?: boolean;
@@ -7,6 +8,8 @@ export interface PlayerCardProps {
 }
 
 export default function PlayerCard({ open, onClose }: PlayerCardProps) {
+  const selectedPlayer = useInGameSceneStore(state => state.selectedPlayer);
+
   const handleClose = (value: boolean) => {
     if (onClose) {
       onClose(value);
@@ -33,7 +36,7 @@ export default function PlayerCard({ open, onClose }: PlayerCardProps) {
                     <div className="px-[100px]">
                       <div className="flex items-start justify-between">
                         <Dialog.Title className="text-base font-semibold leading-6 text-white">
-                          Player Card
+                          {selectedPlayer?.nickname ?? '-'}
                         </Dialog.Title>
                       </div>
                     </div>

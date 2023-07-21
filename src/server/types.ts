@@ -1,22 +1,25 @@
 export interface PlayerDataSpreadsheet {
   Nickname: string;
-  'Ubi Username': string;
-  'Real Name': string;
-  Age: string;
-  'Input Device': string;
-  'Preferred Cam': string;
-  'Preferred Surface': string;
-  'Best Results': string;
   Country: string;
+  'Ubisoft Connect username': string;
+  'Trackmania Account ID': string;
+  'Discord username': string;
+  'Real Name': string;
+  'Input device': string;
+  'Input device model': string;
+  'Preferred camera': string;
+  'Preferred map style': string;
+  'Last AOTC result': string;
 }
 
 export interface PlayerData {
+  accountId: string;
   nickname: string;
   realName: string;
-  age: string;
   country: string;
-  bestResult: string;
+  lastResult: string;
   inputDevice: string;
+  inputDeviceModel: string;
   camera: string;
   preferredStyle: string;
 }

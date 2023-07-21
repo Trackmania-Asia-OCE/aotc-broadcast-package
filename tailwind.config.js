@@ -27,7 +27,7 @@ module.exports = {
         brand: ['TASA Orbiter VF Text', ...defaultTheme.fontFamily.sans],
       },
       gridTemplateRows: {
-        'scene-wrapper': '1080px 400px',
+        'scene-wrapper': '1fr 400px',
       },
       gridTemplateColumns: {
         'item-card': '100px minmax(0, 1fr)',
