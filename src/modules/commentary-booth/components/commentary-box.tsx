@@ -18,7 +18,9 @@ export function CommentaryBox({ nationality, name, handle }: CommentaryBoxProps)
         </div>
         <div className="flex flex-col items-start justify-center flex-1 px-4 min-w-0 h-[75px] bg-black/25 text-white space-y-2">
           <p className={clsx('font-brand uppercase font-bold', styles.name)}>{name}</p>
-          <p className={clsx('font-brand uppercase font-medium', styles.handle)}>{handle}</p>
+          {handle ? (
+            <p className={clsx('font-brand uppercase font-medium', styles.handle)}>{handle}</p>
+          ) : null}
         </div>
       </div>
     </div>
