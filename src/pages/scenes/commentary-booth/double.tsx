@@ -28,9 +28,9 @@ export default function CommentaryBoothDoubleScene() {
   const casterLeftCountry = useCommentaryBoothStore(state => state.casterLeftCountry);
   const casterLeftName = useCommentaryBoothStore(state => state.casterLeftName);
   const casterLeftHandle = useCommentaryBoothStore(state => state.casterLeftHandle);
-  const casterRightCountry = useCommentaryBoothStore(state => state.casterLeftCountry);
-  const casterRightName = useCommentaryBoothStore(state => state.casterLeftName);
-  const casterRightHandle = useCommentaryBoothStore(state => state.casterLeftHandle);
+  const casterRightCountry = useCommentaryBoothStore(state => state.casterRightCountry);
+  const casterRightName = useCommentaryBoothStore(state => state.casterRightName);
+  const casterRightHandle = useCommentaryBoothStore(state => state.casterRightHandle);
 
   return (
     <Screen withBackground>
