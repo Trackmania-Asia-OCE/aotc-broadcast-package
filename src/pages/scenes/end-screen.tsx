@@ -26,10 +26,7 @@ export default function WelcomeScreenScene() {
       <SceneContainer>
         <AOTC2023SceneHeader />
         <SceneContent className="flex items-center justify-start">
-          <AOTC2023IntermissionBlock
-            title={t('end-screen.title')}
-            subtitle={t('end-screen.subtitle')}
-          />
+          <AOTC2023IntermissionBlock title={t('end-screen.title')} subtitle="AOTC 2023" />
         </SceneContent>
         <AOTC2023SceneFooter footerText={t('scene.footer-text')} />
       </SceneContainer>

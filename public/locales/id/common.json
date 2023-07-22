@@ -1,20 +1,27 @@
 {
   "scene": {
-    "footer-text": "Premiere Asia/OCE TM Tournament"
+    "footer-text": "Turnamen TM Teratas Asia/OCE"
   },
   "welcome-screen": {
-    "title": "Siaran Dimulai",
-    "subtitle": "Selamat Datang",
-    "footer-text": "Intermission"
+    "title": "Siaran dimulai",
+    "subtitle": "Selamat datang!"
   },
   "end-screen": {
-    "title": "Sampai Jumpa",
-    "subtitle": "Siaran Berakhir",
-    "footer-text": "Intermission"
+    "title": "Sampai jumpa!",
+    "subtitle": "Siaran berakhir"
   },
   "player-card": {
-    "title": "Info",
-    "footer-text": "Informasi Pemain"
+    "title": "Informasi Pemain"
+  },
+  "map-card": {
+    "title": "Map Information",
+    "surface-title": "Track Surface",
+    "road": "Aspal",
+    "dirt": "Tanah",
+    "grass": "Rumput",
+    "ice": "Es",
+    "plastic": "Plastik",
+    "magnet": "Magnet"
   },
   "commentary-booth": {
     "header-text": "Ruang Komentator",
@@ -23,16 +30,7 @@
   "intermission": {
     "title": "Kami akan kembali!",
     "subtitle": "Intermission",
-    "return-in-text": "Next match in",
-    "footer-text": "Intermission"
-  },
-  "latest-result": {
-    "title": "Hasil Terakhir",
-    "footer-text": "Intermission"
-  },
-  "next-match-warmup": {
-    "title": "Daftar Pemain",
-    "footer-text": "Pertandingan Selanjutnya"
+    "next-match-title": "Pertandingan Selanjutnya"
   },
   "winner-circle": {
     "title": "Pemenang AOTC",

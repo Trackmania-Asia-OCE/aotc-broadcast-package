@@ -65,14 +65,6 @@ const IndexPage: NextPage = () => {
           </ul>
           <ul>
             <li>
-              <Link
-                href="/scenes/matches/next-match-warmup"
-                className="text-brand-purple underline"
-              >
-                Next Match (Warmup)
-              </Link>
-            </li>
-            <li>
               <Link href="/scenes/in-game" className="text-brand-purple underline">
                 In Game
               </Link>
@@ -87,11 +79,6 @@ const IndexPage: NextPage = () => {
             <li>
               <Link href="/scenes/commentary-booth/double" className="text-brand-purple underline">
                 Commentary Booth (Double)
-              </Link>
-            </li>
-            <li>
-              <Link href="/scenes/matches/latest-result" className="text-brand-purple underline">
-                Latest Result
               </Link>
             </li>
           </ul>

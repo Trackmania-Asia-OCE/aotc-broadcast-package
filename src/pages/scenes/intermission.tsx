@@ -26,10 +26,7 @@ export default function IntermissionScene() {
       <SceneContainer>
         <AOTC2023SceneHeader />
         <SceneContent className="flex items-center justify-start">
-          <AOTC2023IntermissionBlock
-            title={t('intermission.title')}
-            subtitle={t('intermission.subtitle')}
-          />
+          <AOTC2023IntermissionBlock title={t('intermission.title')} subtitle="AOTC 2023" />
         </SceneContent>
         <AOTC2023SceneFooter footerText={t('scene.footer-text')} />
       </SceneContainer>
