@@ -1,5 +1,9 @@
 import * as React from 'react';
 import { Dialog, Transition } from '@headlessui/react';
+import { ArrowIcon } from '~/components/icons/arrow-icon';
+import clsx from 'clsx';
+import * as styles from './map-card.css';
+import { CardHeading } from './card-heading';
 
 export interface MapCardProps {
   open?: boolean;
@@ -29,15 +33,24 @@ export function MapCard({ open, onClose }: MapCardProps) {
                 leaveTo="-translate-x-full"
               >
                 <Dialog.Panel className="pointer-events-auto w-screen max-w-[675px]">
-                  <div className="flex h-[1080px] flex-col overflow-hidden bg-gradient-to-r from-black to-black/80 py-[100px]">
+                  <div className="flex h-[1080px] flex-col overflow-hidden bg-gradient-to-r from-black to-black/80 py-[160px]">
                     <div className="px-[100px]">
-                      <div className="flex items-start justify-between">
-                        <Dialog.Title className="text-base font-semibold leading-6 text-white">
-                          Map Card
-                        </Dialog.Title>
-                      </div>
+                      <CardHeading title="-" subtitle="-" />
                     </div>
                     <div className="relative flex-1 px-[100px]">{/* Your content */}</div>
+                    <div className="px-[100px]">
+                      <div className="flex items-center space-x-2">
+                        <ArrowIcon className="text-white" height={10} />
+                        <p
+                          className={clsx(
+                            'font-medium font-brand text-white uppercase',
+                            styles.footer
+                          )}
+                        >
+                          AOTC 2023
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </Dialog.Panel>
               </Transition.Child>

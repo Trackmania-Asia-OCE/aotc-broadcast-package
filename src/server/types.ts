@@ -4,6 +4,7 @@ export interface PlayerDataSpreadsheet {
   'Ubisoft Connect username': string;
   'Trackmania Account ID': string;
   'Discord username': string;
+  Team: string;
   'Real Name': string;
   'Input device': string;
   'Input device model': string;

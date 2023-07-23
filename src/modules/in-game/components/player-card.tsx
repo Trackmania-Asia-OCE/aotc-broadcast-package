@@ -1,6 +1,11 @@
 import * as React from 'react';
 import { Dialog, Transition } from '@headlessui/react';
+import { ArrowIcon } from '~/components/icons/arrow-icon';
+import clsx from 'clsx';
 import { useInGameSceneStore } from '../store';
+import { CardHeading } from './card-heading';
+import * as styles from './player-card.css';
+import { CardSectionHeading } from './card-section-heading';
 
 export interface PlayerCardProps {
   open?: boolean;
@@ -32,15 +37,32 @@ export function PlayerCard({ open, onClose }: PlayerCardProps) {
                 leaveTo="-translate-x-full"
               >
                 <Dialog.Panel className="pointer-events-auto w-screen max-w-[675px]">
-                  <div className="flex h-[1080px] flex-col overflow-hidden bg-gradient-to-r from-black to-black/80 py-[100px]">
+                  <div className="flex h-[1080px] flex-col overflow-hidden bg-gradient-to-r from-black to-black/80 py-[160px]">
                     <div className="px-[100px]">
-                      <div className="flex items-start justify-between">
-                        <Dialog.Title className="text-base font-semibold leading-6 text-white">
-                          {selectedPlayer?.nickname ?? '-'}
-                        </Dialog.Title>
+                      <CardHeading
+                        title={selectedPlayer?.nickname ?? '-'}
+                        subtitle={selectedPlayer?.realName ?? '-'}
+                      />
+                    </div>
+                    <div className="relative flex flex-col justify-center flex-1 px-[100px] py-[64px]">
+                      <div className="space-y-5">
+                        <CardSectionHeading title="Player Information" />
+                        <div className="space-y-4">x</div>
                       </div>
                     </div>
-                    <div className="relative flex-1 px-[100px]">{/* Your content */}</div>
+                    <div className="px-[100px]">
+                      <div className="flex items-center space-x-2">
+                        <ArrowIcon className="text-white" height={10} />
+                        <p
+                          className={clsx(
+                            'font-medium font-brand text-white uppercase',
+                            styles.footer
+                          )}
+                        >
+                          AOTC 2023
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </Dialog.Panel>
               </Transition.Child>
