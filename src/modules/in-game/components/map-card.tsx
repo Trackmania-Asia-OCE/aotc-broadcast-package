@@ -37,7 +37,9 @@ export function MapCard({ open, onClose }: MapCardProps) {
                     <div className="px-[100px]">
                       <CardHeading title="-" subtitle="-" />
                     </div>
-                    <div className="relative flex-1 px-[100px]">{/* Your content */}</div>
+                    <div className="relative flex-1 px-[100px] pt-[108px] pb-[64px]">
+                      {/* Your content */}
+                    </div>
                     <div className="px-[100px]">
                       <div className="flex items-center space-x-2">
                         <ArrowIcon className="text-white" height={10} />

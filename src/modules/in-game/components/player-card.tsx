@@ -44,7 +44,7 @@ export function PlayerCard({ open, onClose }: PlayerCardProps) {
                         subtitle={selectedPlayer?.realName ?? '-'}
                       />
                     </div>
-                    <div className="relative flex flex-col justify-center flex-1 px-[100px] py-[64px]">
+                    <div className="relative flex-1 px-[100px] pt-[108px] pb-[64px]">
                       <div className="space-y-5">
                         <CardSectionHeading title="Player Information" />
                         <div className="space-y-4">x</div>
