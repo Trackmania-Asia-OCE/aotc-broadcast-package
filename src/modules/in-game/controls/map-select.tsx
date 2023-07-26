@@ -1,24 +1,22 @@
 import { Combobox, Transition } from '@headlessui/react';
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid';
 import clsx from 'clsx';
-import { useRouter } from 'next/router';
 import * as React from 'react';
 import { trpc } from '~/utils/trpc';
-import { PlayerData } from '~/server/types';
+import { MapData } from '~/server/types';
 import { useInGameSceneStore } from '../store';
 
-export function PlayerSelect() {
-  const router = useRouter();
-  const { data } = trpc.players.getAllPlayersData.useQuery({ locale: router.locale });
+export function MapSelect() {
+  const { data } = trpc.maps.getAllMapsData.useQuery();
   const [query, setQuery] = React.useState('');
-  const selectedPlayer = useInGameSceneStore(state => state.selectedPlayer);
-  const setSelectedPlayer = useInGameSceneStore(state => state.setSelectedPlayer);
+  const selectedMap = useInGameSceneStore(state => state.selectedMap);
+  const setSelectedMap = useInGameSceneStore(state => state.setSelectedMap);
 
-  const filteredPlayers =
+  const filteredMaps =
     query === ''
       ? data
-      : data?.filter(player =>
-          player.nickname
+      : data?.filter(map =>
+          map.name
             .toLowerCase()
             .replace(/\s+/g, '')
             .includes(query.toLowerCase().replace(/\s+/g, ''))
@@ -26,18 +24,18 @@ export function PlayerSelect() {
 
   return (
     <div className="flex items-center space-x-2">
-      <Combobox value={selectedPlayer} onChange={setSelectedPlayer}>
+      <Combobox value={selectedMap} onChange={setSelectedMap}>
         {({ open }) => (
           <div className="flex items-center space-x-2">
             <Combobox.Label className="block text-sm font-medium leading-6 text-gray-900">
-              Select player
+              Select map
             </Combobox.Label>
             <div className="relative">
               <Combobox.Input
                 className="w-full rounded-md border-0 bg-white py-1.5 pl-3 pr-10 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                displayValue={(player: PlayerData) => player.nickname}
+                displayValue={(map: MapData) => map.name}
                 onChange={event => setQuery(event.target.value)}
-                placeholder="Select a player..."
+                placeholder="Select a map..."
               />
               <Combobox.Button className="absolute inset-y-0 right-0 flex items-center rounded-r-md px-2 focus:outline-none">
                 <ChevronUpDownIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
@@ -52,9 +50,9 @@ export function PlayerSelect() {
                 afterLeave={() => setQuery('')}
               >
                 <Combobox.Options className="absolute z-10 mt-1 max-h-[160px] w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
-                  {filteredPlayers?.map(item => (
+                  {filteredMaps?.map(item => (
                     <Combobox.Option
-                      key={item.accountId}
+                      key={item.uid}
                       className={({ active }) =>
                         clsx(
                           active ? 'bg-indigo-600 text-white' : 'text-gray-900',
@@ -71,7 +69,7 @@ export function PlayerSelect() {
                               'block truncate'
                             )}
                           >
-                            {item.nickname}
+                            {item.name}
                           </span>
 
                           {selected ? (
@@ -94,13 +92,6 @@ export function PlayerSelect() {
           </div>
         )}
       </Combobox>
-      <button
-        type="button"
-        className="rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
-        onClick={() => setSelectedPlayer(undefined)}
-      >
-        Clear
-      </button>
     </div>
   );
 }

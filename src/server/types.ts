@@ -24,3 +24,24 @@ export interface PlayerData {
   camera: string;
   preferredStyle: string;
 }
+
+export interface MapDataSpreadsheet {
+  UID: string;
+  Name: string;
+  Author: string;
+  'Author Time': string;
+  Road: string;
+  Dirt: string;
+  Grass: string;
+  Ice: string;
+  Plastic: string;
+  Magnet: string;
+}
+
+export interface MapData {
+  uid: string;
+  name: string;
+  author: string;
+  authorTime: string;
+  surfaces: string[];
+}

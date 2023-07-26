@@ -1,6 +1,6 @@
 import * as React from 'react';
 import clsx from 'clsx';
-import { ArrowIcon } from '../icons/arrow-icon';
+import { ArrowIcon } from '~/components/icons/arrow-icon';
 import * as styles from './in-game-current-match.css';
 
 export interface AOTC2023CurrentMatchProps {
