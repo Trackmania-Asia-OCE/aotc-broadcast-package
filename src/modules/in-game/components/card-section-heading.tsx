@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import * as React from 'react';
-import { ArrowIcon } from '~/components/icons/arrow-icon';
+import { ArrowIcon } from '~/components/icons';
 import * as styles from './card-section-heading.css';
 
 export interface CardSectionHeadingProps {

@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 import * as React from 'react';
-import { CheckerboardIcon } from '../icons/checkerboard-icon';
-import { ArrowIcon } from '../icons/arrow-icon';
+import { ArrowIcon, CheckerboardIcon } from '../icons';
 import * as styles from './scene-header.css';
 
 export interface SceneHeaderProps extends React.ComponentPropsWithoutRef<'header'> {

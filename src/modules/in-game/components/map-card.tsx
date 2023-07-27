@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import { ArrowIcon } from '~/components/icons/arrow-icon';
 import clsx from 'clsx';
+import { ArrowIcon } from '~/components/icons';
 import * as styles from './map-card.css';
 import { CardHeading } from './card-heading';
 

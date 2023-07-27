@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import * as React from 'react';
-import { ArrowIcon } from '../icons/arrow-icon';
+import { ArrowIcon } from '../icons';
 import * as styles from './scene-footer.css';
 
 export interface AOTC2023SceneFooterProps {
