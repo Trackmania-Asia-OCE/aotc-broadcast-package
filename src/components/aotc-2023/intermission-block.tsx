@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import * as React from 'react';
-import * as styles from './intermission-block.css';
 import { ArrowIcon } from '../icons';
+import * as styles from './intermission-block.css';
 
 export interface AOTC2023IntermissionBlockProps {
   title: string;
