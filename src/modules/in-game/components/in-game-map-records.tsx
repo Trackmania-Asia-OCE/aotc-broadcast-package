@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import * as React from 'react';
 import { trpc } from '~/utils/trpc';
 import { StopwatchIcon } from '~/components/icons';
@@ -9,17 +10,53 @@ export interface AOTC2023MapRecordsProps {
 }
 
 export function AOTC2023MapRecords({ currentMapUID }: AOTC2023MapRecordsProps) {
-  const { data } = trpc.maps.getMapRecordByUID.useQuery({ uid: currentMapUID });
+  const { data, isFetching, isError } = trpc.maps.getMapRecordByUID.useQuery(
+    {
+      uid: currentMapUID,
+    },
+    { refetchInterval: 10000 }
+  );
 
-  console.log(data);
+  const renderTime = () => {
+    if ((!data && isFetching) || isError) {
+      return 0;
+    }
+
+    if (data?.record?.time) {
+      return data.record.time;
+    }
+
+    return 0;
+  };
+
+  const renderUsername = () => {
+    if (!data && isFetching) {
+      return 'Fetching records...';
+    }
+
+    if (isError) {
+      return '-';
+    }
+
+    if (data?.record?.player.name) {
+      return data.record.player.name;
+    }
+
+    return '-';
+  };
 
   return (
     <div className={styles.root}>
       <div className={styles.iconWrapper}>
         <StopwatchIcon width={50} height={50} />
       </div>
-      <div>
-        {formatTime(data?.record?.time ?? 0)} {data?.record?.player.name ?? '-'}
+      <div className="flex flex-col justify-center space-y-2 pl-[10px]">
+        <p className={clsx('font-bold font-brand text-white uppercase', styles.title)}>
+          {formatTime(renderTime())}
+        </p>
+        <p className={clsx('font-medium font-brand text-white uppercase', styles.subtitle)}>
+          {renderUsername()}
+        </p>
       </div>
     </div>
   );

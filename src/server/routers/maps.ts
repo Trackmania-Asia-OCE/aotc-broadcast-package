@@ -63,7 +63,7 @@ export const mapsRouter = router({
 
       try {
         const url = queryString.stringifyUrl({
-          url: `${TMIO_LEADERBOARD_API_URL}/${input.uid}`,
+          url: `${TMIO_LEADERBOARD_API_URL}/${input.uid.trim()}`,
           query: { offset: 0, length: 1 },
         });
 

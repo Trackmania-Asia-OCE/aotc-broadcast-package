@@ -18,14 +18,16 @@ export default function InGameScene() {
   const currentMatch = useInGameSceneStore(state => state.currentMatch);
   const selectedMap = useInGameSceneStore(state => state.selectedMap);
   const showable = useInGameSceneStore(state => state.showable);
+  const isRecordsOpen = useInGameSceneStore(state => state.isRecordsOpen);
   const setShowable = useInGameSceneStore(state => state.setShowable);
+  const setIsRecordsOpen = useInGameSceneStore(state => state.setIsRecordsOpen);
 
   return (
     <Screen>
       <SceneContainer>
         <AOTC2023InGameOverlay>
           <AOTC2023CurrentMatch currentMatch={currentMatch} />
-          <AOTC2023MapRecords currentMapUID={selectedMap?.uid} />
+          {isRecordsOpen ? <AOTC2023MapRecords currentMapUID={selectedMap?.uid} /> : null}
           <PlayerCard open={showable === 'player-card'} onClose={() => setShowable(undefined)} />
           <MapCard open={showable === 'map-card'} onClose={() => setShowable(undefined)} />
         </AOTC2023InGameOverlay>
@@ -47,7 +49,17 @@ export default function InGameScene() {
           </div>
           <div className="p-4 sm:px-6">
             <div className="flex items-center justify-end space-x-4">
-              <div>Map Records (TODO)</div>
+              <ToggleSwitch
+                label="Map Records"
+                enabled={isRecordsOpen}
+                setEnabled={checked => {
+                  if (checked) {
+                    setIsRecordsOpen(true);
+                  } else {
+                    setIsRecordsOpen(false);
+                  }
+                }}
+              />
               <ToggleSwitch
                 label="Map Card"
                 enabled={showable === 'map-card'}

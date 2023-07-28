@@ -1,4 +1,6 @@
 import { style } from '@vanilla-extract/css';
+import { createStyleObject } from '@capsizecss/core';
+import { TASAOrbiter as fontMetrics } from '~/utils/capsize-metrics';
 
 export const root = style({
   display: 'flex',
@@ -18,3 +20,19 @@ export const iconWrapper = style({
   backgroundColor: '#b54d99',
   color: '#fff',
 });
+
+export const title = style(
+  createStyleObject({
+    fontSize: 24,
+    leading: 24,
+    fontMetrics,
+  })
+);
+
+export const subtitle = style(
+  createStyleObject({
+    fontSize: 16,
+    leading: 16,
+    fontMetrics,
+  })
+);

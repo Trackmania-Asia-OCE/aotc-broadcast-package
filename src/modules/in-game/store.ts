@@ -12,6 +12,8 @@ export interface InGameSceneStore {
   setSelectedMap: (map?: MapData) => void;
   showable?: InGameSceneShowables;
   setShowable: (showable?: InGameSceneShowables) => void;
+  isRecordsOpen?: boolean;
+  setIsRecordsOpen: (isRecordsOpen: boolean) => void;
 }
 
 export const useInGameSceneStore = create<InGameSceneStore>(set => ({
@@ -23,4 +25,6 @@ export const useInGameSceneStore = create<InGameSceneStore>(set => ({
   setSelectedMap: (map?: MapData) => set(() => ({ selectedMap: map })),
   showable: undefined,
   setShowable: (showable?: InGameSceneShowables) => set(() => ({ showable })),
+  isRecordsOpen: false,
+  setIsRecordsOpen: (isRecordsOpen: boolean) => set(() => ({ isRecordsOpen })),
 }));
