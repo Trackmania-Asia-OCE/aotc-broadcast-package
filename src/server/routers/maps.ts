@@ -2,10 +2,13 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import * as trpc from '@trpc/server';
+import queryString from 'query-string';
 import * as z from 'zod';
 import { getGoogleSheetById } from '~/utils/google-sheets';
 import { publicProcedure, router } from '../trpc';
-import { MapData, MapDataSpreadsheet } from '../types';
+import { MapData, MapDataSpreadsheet, MapRecordData } from '../types';
+
+const TMIO_LEADERBOARD_API_URL = 'https://trackmania.io/api/leaderboard/map';
 
 export const mapsRouter = router({
   getAllMapsData: publicProcedure.query(async () => {
@@ -47,10 +50,46 @@ export const mapsRouter = router({
   getMapRecordByUID: publicProcedure
     .input(
       z.object({
-        uid: z.string(),
+        uid: z.string().optional(),
       })
     )
     .query(async ({ input }) => {
-      return input;
+      if (!input.uid) {
+        throw new trpc.TRPCError({
+          code: 'BAD_REQUEST',
+          message: 'No map selected.',
+        });
+      }
+
+      try {
+        const url = queryString.stringifyUrl({
+          url: `${TMIO_LEADERBOARD_API_URL}/${input.uid}`,
+          query: { offset: 0, length: 1 },
+        });
+
+        const data = await fetch(url, {
+          headers: {
+            'User-Agent': 'aotc-broadcast-package/1.0.0',
+          },
+        }).then(res => res.json());
+
+        if (data?.tops?.length > 0 && data.playercount > 0) {
+          return {
+            record: data.tops[0],
+            playercount: data.playercount,
+          } as MapRecordData;
+        }
+
+        return {
+          record: undefined,
+          playercount: 0,
+        } as MapRecordData;
+      } catch (err: unknown) {
+        throw new trpc.TRPCError({
+          code: 'INTERNAL_SERVER_ERROR',
+          message: 'An unexpected error occurred, please try again later.',
+          cause: err,
+        });
+      }
     }),
 });

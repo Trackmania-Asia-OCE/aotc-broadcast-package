@@ -16,4 +16,5 @@ export const iconWrapper = style({
   width: 65,
   height: 65,
   backgroundColor: '#b54d99',
+  color: '#fff',
 });

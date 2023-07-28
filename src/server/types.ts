@@ -45,3 +45,24 @@ export interface MapData {
   authorTime: string;
   surfaces: string[];
 }
+
+export interface TMIOPlayerData {
+  id: string;
+  name: string;
+  tag?: string;
+  meta: Record<string, string>;
+}
+
+export interface TMIORecordData {
+  filename: string;
+  player: TMIOPlayerData;
+  position: number;
+  time: number;
+  timestamp: string;
+  url: string;
+}
+
+export interface MapRecordData {
+  playercount: number;
+  record?: TMIORecordData;
+}
