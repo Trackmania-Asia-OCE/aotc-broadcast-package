@@ -69,7 +69,7 @@ export const mapsRouter = router({
 
         const data = await fetch(url, {
           headers: {
-            'User-Agent': 'aotc-broadcast-package/1.0.0',
+            'User-Agent': 'resir014-overlays/1.0.0 (AOTC 2023)',
           },
         }).then(res => res.json());
 
