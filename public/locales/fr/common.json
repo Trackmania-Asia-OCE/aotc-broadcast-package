@@ -1,33 +1,36 @@
 {
+  "scene": {
+    "footer-text": "Premiere Asia/OCE TM Tournament"
+  },
   "welcome-screen": {
-    "title": "Bienvenue",
-    "subtitle": "Début du stream",
-    "footer-text": "Début"
+    "title": "Début du stream",
+    "subtitle": "Bienvenue"
   },
   "end-screen": {
     "title": "À bientôt !",
-    "subtitle": "Fin du stream",
-    "footer-text": "Fin"
+    "subtitle": "Fin du stream"
   },
   "player-card": {
-    "title": "Infos",
-    "footer-text": "Informations joueur"
+    "title": "Informations joueur"
+  },
+  "map-card": {
+    "title": "Map Information",
+    "surface-title": "Track Surface",
+    "road": "Road",
+    "dirt": "Dirt",
+    "grass": "Grass",
+    "ice": "Ice",
+    "plastic": "Plastic",
+    "magnet": "Magnet"
   },
   "commentary-booth": {
-    "results-title": "Dernier résultat",
-    "footer-text": "Cabine Commentateur"
+    "header-text": "Cabine Commentateur",
+    "results-title": "Dernier résultat"
   },
   "intermission": {
-    "return-in-text": "Prochain match dans",
-    "footer-text": "Pause"
-  },
-  "latest-result": {
-    "title": "Dernier résultat",
-    "footer-text": "Résultats"
-  },
-  "next-match-warmup": {
-    "title": "Joueurs",
-    "footer-text": "Prochain match"
+    "title": "We'll be back!",
+    "subtitle": "Intermission",
+    "next-match-title": "Prochain match"
   },
   "winner-circle": {
     "title": "Vainqueurs AOTC",

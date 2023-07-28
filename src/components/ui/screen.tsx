@@ -11,23 +11,14 @@ export const Screen = React.forwardRef<HTMLDivElement, ScreenProps>(
     return (
       <main
         className={clsx(
-          'flex flex-col w-full min-w-full h-full min-h-screen',
-          withBackground && 'bg-black bg-opacity-30',
+          'grid w-full min-w-full h-full min-h-screen grid-rows-scene-wrapper',
+          withBackground && 'bg-black/10',
           className
         )}
         ref={ref}
         {...rest}
       >
-        <div
-          className={clsx(
-            'flex flex-col flex-1',
-            gradient === 'to-right' && 'bg-gradient-to-r',
-            gradient === 'to-left' && 'bg-gradient-to-l',
-            gradient && 'from-transparent to-black'
-          )}
-        >
-          {children}
-        </div>
+        {children}
       </main>
     );
   }

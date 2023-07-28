@@ -5,7 +5,7 @@ export type SceneContentProps = React.ComponentPropsWithoutRef<'div'>;
 
 export function SceneContent({ children, className, ...rest }: SceneContentProps) {
   return (
-    <div className={clsx('flex-1 px-[101px]', className)} {...rest}>
+    <div className={clsx('flex-1 px-[101px] py-20', className)} {...rest}>
       {children}
     </div>
   );

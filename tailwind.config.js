@@ -5,6 +5,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        'screen-blue': '#0000FF',
+        'screen-green': '#00FF00',
+        'screen-red': '#FF0000',
         'brand-turquoise': '#0BDBD4',
         'brand-purple': '#352166',
         'brand-black': '#0A0613',
@@ -21,7 +24,10 @@ module.exports = {
         'brand-wider': '1em',
       },
       fontFamily: {
-        brand: ['Erbaum', ...defaultTheme.fontFamily.sans],
+        brand: ['TASA Orbiter VF Text', ...defaultTheme.fontFamily.sans],
+      },
+      gridTemplateRows: {
+        'scene-wrapper': '1080px 400px',
       },
       gridTemplateColumns: {
         'item-card': '100px minmax(0, 1fr)',
@@ -31,5 +37,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [require('@tailwindcss/line-clamp')],
+  plugins: [require('@tailwindcss/line-clamp'), require('@tailwindcss/forms')],
 };
