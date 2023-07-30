@@ -1,10 +1,11 @@
 import * as React from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import clsx from 'clsx';
-import { ArrowIcon } from '~/components/icons';
+import { ArrowIcon, CameraIcon, ControllerIcon, HashtagIcon, MedalIcon } from '~/components/icons';
 import { useInGameSceneStore } from '../store';
 import { CardSectionHeading } from '../components/card-section-heading';
 import { CardHeading } from '../components/card-heading';
+import { InfoItemCard } from '../components/info-item-card';
 import * as styles from './player-card.css';
 
 export interface PlayerCardProps {
@@ -40,14 +41,38 @@ export function PlayerCard({ open, onClose }: PlayerCardProps) {
                   <div className="flex h-[1080px] flex-col overflow-hidden bg-gradient-to-r from-black to-black/80 py-[160px]">
                     <div className="px-[100px]">
                       <CardHeading
-                        title={selectedPlayer?.nickname ?? '-'}
-                        subtitle={selectedPlayer?.realName ?? '-'}
+                        title={selectedPlayer?.nickname ? selectedPlayer.nickname : '-'}
+                        subtitle={selectedPlayer?.realName ? selectedPlayer.realName : '-'}
                       />
                     </div>
                     <div className="relative flex-1 px-[100px] pt-[108px] pb-[64px]">
                       <div className="space-y-5">
                         <CardSectionHeading title="Player Information" />
-                        <div className="space-y-4">x</div>
+                        <div className="space-y-4">
+                          <InfoItemCard
+                            icon={MedalIcon}
+                            title={
+                              selectedPlayer?.lastResult
+                                ? selectedPlayer.lastResult
+                                : 'No previous result'
+                            }
+                          />
+                          <InfoItemCard
+                            icon={ControllerIcon}
+                            title={selectedPlayer?.inputDevice ? selectedPlayer.inputDevice : '-'}
+                            subtitle={selectedPlayer?.inputDeviceModel}
+                          />
+                          <InfoItemCard
+                            icon={CameraIcon}
+                            title={selectedPlayer?.camera ? selectedPlayer.camera : '-'}
+                          />
+                          <InfoItemCard
+                            icon={HashtagIcon}
+                            title={
+                              selectedPlayer?.preferredStyle ? selectedPlayer.preferredStyle : '-'
+                            }
+                          />
+                        </div>
                       </div>
                     </div>
                     <div className="px-[100px]">
