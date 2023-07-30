@@ -3,9 +3,9 @@ import { Dialog, Transition } from '@headlessui/react';
 import clsx from 'clsx';
 import { ArrowIcon } from '~/components/icons';
 import { useInGameSceneStore } from '../store';
-import { CardHeading } from './card-heading';
+import { CardSectionHeading } from '../components/card-section-heading';
+import { CardHeading } from '../components/card-heading';
 import * as styles from './player-card.css';
-import { CardSectionHeading } from './card-section-heading';
 
 export interface PlayerCardProps {
   open?: boolean;

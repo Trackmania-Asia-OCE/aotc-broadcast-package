@@ -8,11 +8,11 @@ import { ControlsCard } from '~/modules/controls/controls-card';
 import { CurrentMatch } from '~/modules/in-game/controls/current-match';
 import { PlayerSelect } from '~/modules/in-game/controls/player-select';
 import { useInGameSceneStore } from '~/modules/in-game/store';
-import { MapCard } from '~/modules/in-game/components/map-card';
-import { PlayerCard } from '~/modules/in-game/components/player-card';
 import { AOTC2023CurrentMatch } from '~/modules/in-game/components/in-game-current-match';
 import { AOTC2023MapRecords } from '~/modules/in-game/components/in-game-map-records';
 import { MapSelect } from '~/modules/in-game/controls/map-select';
+import { PlayerCard } from '~/modules/in-game/showables/player-card';
+import { MapCard } from '~/modules/in-game/showables/map-card';
 
 export default function InGameScene() {
   const currentMatch = useInGameSceneStore(state => state.currentMatch);
