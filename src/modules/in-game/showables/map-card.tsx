@@ -3,14 +3,14 @@ import { Dialog, Transition } from '@headlessui/react';
 import clsx from 'clsx';
 import { ArrowIcon, StopwatchIcon } from '~/components/icons';
 import { trpc } from '~/utils/trpc';
+import { formatTime } from '~/utils/format-time';
 import { useInGameSceneStore } from '../store';
 import { CardHeading } from '../components/card-heading';
 import { CardSectionHeading } from '../components/card-section-heading';
 import { InfoItemCard } from '../components/info-item-card';
-import * as styles from './map-card.css';
-import { formatTime } from '~/utils/format-time';
 import { InfoBadge } from '../components/info-badge';
 import { MAP_SURFACES } from '../constants';
+import * as styles from './map-card.css';
 
 export interface MapCardProps {
   open?: boolean;
