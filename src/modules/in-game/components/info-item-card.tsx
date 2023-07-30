@@ -15,9 +15,16 @@ export function InfoItemCard({ title, subtitle, icon }: InfoItemCardProps) {
         {icon ? React.createElement(icon, { width: 50, height: 50 }) : null}
       </div>
       <div className={clsx(styles.content, 'space-y-2')}>
-        <p className={clsx('font-bold font-brand text-white uppercase', styles.title)}>{title}</p>
+        <p className={clsx('font-bold font-brand text-white uppercase line-clamp-2', styles.title)}>
+          {title}
+        </p>
         {subtitle ? (
-          <p className={clsx('font-medium font-brand text-white uppercase', styles.subtitle)}>
+          <p
+            className={clsx(
+              'font-medium font-brand text-white uppercase line-clamp-1',
+              styles.subtitle
+            )}
+          >
             {subtitle}
           </p>
         ) : null}
