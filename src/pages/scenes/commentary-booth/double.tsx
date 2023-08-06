@@ -13,6 +13,7 @@ import { EditCastersLeft } from '~/modules/commentary-booth/controls/edit-caster
 import { EditCastersRight } from '~/modules/commentary-booth/controls/edit-casters-right';
 import { useCommentaryBoothStore } from '~/modules/commentary-booth/store';
 import { ControlsCard } from '~/modules/controls/controls-card';
+import { EditMatchResults } from '~/modules/matches/controls/edit-match-results';
 
 export async function getStaticProps({ locale }: GetStaticPropsContext) {
   return {
@@ -70,12 +71,7 @@ export default function CommentaryBoothDoubleScene() {
             <h2 className="text-base font-semibold leading-7 text-gray-900">Results</h2>
           </div>
           <div className="p-4 sm:px-6">
-            <div className="flex items-center space-x-6">
-              <div>Result 1</div>
-              <div>Result 2</div>
-              <div>Result 3</div>
-              <div>Result 4</div>
-            </div>
+            <EditMatchResults />
           </div>
           <div className="bg-gray-50 px-4 py-2 sm:px-6">
             <h2 className="text-base font-semibold leading-7 text-gray-900">Showables</h2>
