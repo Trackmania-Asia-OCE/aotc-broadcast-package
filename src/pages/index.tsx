@@ -1,5 +1,4 @@
 import * as React from 'react';
-import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -22,7 +21,7 @@ function LocaleLink({ locale }: LocaleLinkProps) {
   );
 }
 
-const IndexPage: NextPage = () => {
+export default function IndexPage() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
       <Head>
@@ -86,6 +85,4 @@ const IndexPage: NextPage = () => {
       </main>
     </div>
   );
-};
-
-export default IndexPage;
+}
