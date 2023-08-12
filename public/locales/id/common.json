@@ -28,13 +28,5 @@
   "intermission": {
     "title": "Kami akan kembali!",
     "next-match-title": "Pertandingan Selanjutnya"
-  },
-  "winner-circle": {
-    "title": "Pemenang AOTC",
-    "first": "1st",
-    "second": "2nd",
-    "third": "3rd",
-    "fourth": "4th",
-    "footer-text": "Winner Circle"
   }
 }

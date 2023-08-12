@@ -28,13 +28,5 @@
   "intermission": {
     "title": "We'll be back!",
     "next-match-title": "Next Match"
-  },
-  "winner-circle": {
-    "title": "AOTC Winners",
-    "first": "1st",
-    "second": "2nd",
-    "third": "3rd",
-    "fourth": "4th",
-    "footer-text": "Winner Circle"
   }
 }

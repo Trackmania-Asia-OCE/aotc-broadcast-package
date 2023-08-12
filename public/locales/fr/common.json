@@ -12,13 +12,13 @@
     "title": "Informations joueur"
   },
   "map-card": {
-    "title": "Map Information",
-    "surface-title": "Track Surface",
-    "road": "Road",
-    "dirt": "Dirt",
-    "grass": "Grass",
-    "ice": "Ice",
-    "plastic": "Plastic",
+    "title": "Informations Circuit",
+    "surface-title": "Surface",
+    "road": "Tarmac",
+    "dirt": "Terre",
+    "grass": "Herbe",
+    "ice": "Glace",
+    "plastic": "Plastique",
     "magnet": "Magnet"
   },
   "commentary-booth": {
@@ -26,15 +26,7 @@
     "results-title": "Dernier résultat"
   },
   "intermission": {
-    "title": "We'll be back!",
+    "title": "A tout de suite !",
     "next-match-title": "Prochain match"
-  },
-  "winner-circle": {
-    "title": "Vainqueurs AOTC",
-    "first": "1er",
-    "second": "2ème",
-    "third": "3ème",
-    "fourth": "4ème",
-    "footer-text": "Résultat final"
   }
 }
