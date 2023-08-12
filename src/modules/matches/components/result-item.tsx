@@ -20,10 +20,8 @@ export const ResultItem = React.forwardRef<HTMLDivElement, ResultItemProps>(func
       <div className="flex items-center justify-center w-[75px] h-[50px] bg-white text-black">
         <span className={clsx('font-brand uppercase font-bold', styles.capText)}>{country}</span>
       </div>
-      <div className="flex items-center justify-center flex-1 h-[50px] px-[10px] text-white">
-        <span className={clsx('font-brand uppercase font-bold line-clamp-1', styles.capText)}>
-          {name}
-        </span>
+      <div className="flex items-center justify-center flex-1 h-[50px] px-[10px] text-white overflow-hidden truncate">
+        <span className={clsx('font-brand uppercase font-bold', styles.capText)}>{name}</span>
       </div>
     </div>
   );

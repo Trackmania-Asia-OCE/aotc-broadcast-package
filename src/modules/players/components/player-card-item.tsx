@@ -23,7 +23,7 @@ export function PlayerCardItem({
       <div className="flex items-center justify-start min-w-0 px-9 h-[100px] bg-brand-further-red text-brand-white">
         <p
           className={clsx(
-            isMultiline ? 'text-xl leading-6 line-clamp-2' : 'text-2xl leading-7 truncate',
+            isMultiline ? 'text-xl leading-6' : 'text-2xl leading-7 truncate',
             'font-brand uppercase tracking-brand-wide'
           )}
         >
