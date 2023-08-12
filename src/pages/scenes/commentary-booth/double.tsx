@@ -8,12 +8,14 @@ import { ControlsContainer } from '~/components/ui/controls-container';
 import { SceneContainer } from '~/components/ui/scene-container';
 import { SceneContent } from '~/components/ui/scene-content';
 import { Screen } from '~/components/ui/screen';
+import { ToggleSwitch } from '~/components/ui/toggle-switch';
 import { CommentaryBox, CommentaryBoxWrapper } from '~/modules/commentary-booth/components';
 import { EditCastersLeft } from '~/modules/commentary-booth/controls/edit-casters-left';
 import { EditCastersRight } from '~/modules/commentary-booth/controls/edit-casters-right';
 import { useCommentaryBoothStore } from '~/modules/commentary-booth/store';
 import { ControlsCard } from '~/modules/controls/controls-card';
 import { EditMatchResults } from '~/modules/matches/controls/edit-match-results';
+import { MatchResults } from '~/modules/matches/showables/match-results';
 
 export async function getStaticProps({ locale }: GetStaticPropsContext) {
   return {
@@ -25,7 +27,7 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
 
 export default function CommentaryBoothDoubleScene() {
   const { t } = useTranslation('common');
-
+  const [isResultsVisible, setIsResultsVisible] = React.useState(false);
   const casterLeftCountry = useCommentaryBoothStore(state => state.casterLeftCountry);
   const casterLeftName = useCommentaryBoothStore(state => state.casterLeftName);
   const casterLeftHandle = useCommentaryBoothStore(state => state.casterLeftHandle);
@@ -37,7 +39,7 @@ export default function CommentaryBoothDoubleScene() {
     <Screen withBackground>
       <SceneContainer>
         <AOTC2023SceneHeader title="AOTC 2023" subtitle={t('commentary-booth.header-text')} />
-        <SceneContent className="flex flex-col items-center justify-start">
+        <SceneContent className="flex flex-col items-center justify-start space-y-[50px]">
           <CommentaryBoxWrapper>
             <CommentaryBox
               nationality={casterLeftCountry}
@@ -50,6 +52,7 @@ export default function CommentaryBoothDoubleScene() {
               handle={casterRightHandle}
             />
           </CommentaryBoxWrapper>
+          <MatchResults isVisible={isResultsVisible} title={t('commentary-booth.results-title')} />
         </SceneContent>
         <AOTC2023SceneFooter footerText={t('scene.footer-text')} />
       </SceneContainer>
@@ -78,7 +81,17 @@ export default function CommentaryBoothDoubleScene() {
           </div>
           <div className="p-4 sm:px-6">
             <div className="flex items-center space-x-6">
-              <div>Results</div>
+              <ToggleSwitch
+                label="Results"
+                enabled={isResultsVisible}
+                setEnabled={checked => {
+                  if (checked) {
+                    setIsResultsVisible(true);
+                  } else {
+                    setIsResultsVisible(false);
+                  }
+                }}
+              />
             </div>
           </div>
         </ControlsCard>

@@ -3,12 +3,10 @@
     "footer-text": "Turnamen TM Teratas Asia/OCE"
   },
   "welcome-screen": {
-    "title": "Siaran dimulai",
-    "subtitle": "Selamat datang!"
+    "title": "Siaran dimulai"
   },
   "end-screen": {
-    "title": "Sampai jumpa!",
-    "subtitle": "Siaran berakhir"
+    "title": "Sampai jumpa!"
   },
   "player-card": {
     "title": "Informasi Pemain"
@@ -29,7 +27,6 @@
   },
   "intermission": {
     "title": "Kami akan kembali!",
-    "subtitle": "Intermission",
     "next-match-title": "Pertandingan Selanjutnya"
   },
   "winner-circle": {
