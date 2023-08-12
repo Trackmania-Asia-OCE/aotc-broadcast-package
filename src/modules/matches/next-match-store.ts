@@ -4,8 +4,8 @@ import { PlayerData } from '~/server/types';
 
 export interface NextMatchStore {
   players: (PlayerData | undefined)[];
-  setPlayerAtIndex?: (index: number, player?: PlayerData) => void;
-  removePlayerAtIndex?: (index: number) => void;
+  setPlayerAtIndex: (index: number, player?: PlayerData) => void;
+  removePlayerAtIndex: (index: number) => void;
 }
 
 const defaultPlayers = Array<PlayerData | undefined>(4).fill(undefined);

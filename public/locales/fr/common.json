@@ -3,12 +3,10 @@
     "footer-text": "Premiere Asia/OCE TM Tournament"
   },
   "welcome-screen": {
-    "title": "Début du stream",
-    "subtitle": "Bienvenue"
+    "title": "Début du stream"
   },
   "end-screen": {
-    "title": "À bientôt !",
-    "subtitle": "Fin du stream"
+    "title": "À bientôt !"
   },
   "player-card": {
     "title": "Informations joueur"
@@ -29,7 +27,6 @@
   },
   "intermission": {
     "title": "We'll be back!",
-    "subtitle": "Intermission",
     "next-match-title": "Prochain match"
   },
   "winner-circle": {
