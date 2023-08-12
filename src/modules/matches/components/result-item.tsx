@@ -13,7 +13,7 @@ export const ResultItem = React.forwardRef<HTMLDivElement, ResultItemProps>(func
   ref
 ) {
   return (
-    <div ref={ref} className="flex items-center flex-1 h-[50px] bg-black/25">
+    <div ref={ref} className="flex items-center flex-1 w-full h-[50px] bg-black/25">
       <div className="flex items-center justify-center w-[50px] h-[50px] text-white">
         <span className={clsx('font-brand uppercase font-bold', styles.capText)}>{position}</span>
       </div>

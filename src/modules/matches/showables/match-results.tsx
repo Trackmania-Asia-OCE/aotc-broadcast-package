@@ -9,7 +9,7 @@ export interface MatchResultsProps {
   title: string;
 }
 
-export function MatchResults({ isVisible, title }: MatchResultsProps) {
+export function MatchResults({ isVisible = false, title }: MatchResultsProps) {
   const players = useResultsStore(state => state.players);
 
   return (
