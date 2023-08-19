@@ -41,7 +41,11 @@ export function PlayerCard({ open, onClose }: PlayerCardProps) {
                   <div className="flex h-[1080px] flex-col overflow-hidden bg-gradient-to-r from-black to-black/80 py-[160px]">
                     <div className="px-[100px]">
                       <CardHeading
-                        title={selectedPlayer?.nickname ? selectedPlayer.nickname : '-'}
+                        title={
+                          selectedPlayer?.nickname
+                            ? `${selectedPlayer.nickname}${selectedPlayer.isRookie ? ' (R)' : ''}`
+                            : '-'
+                        }
                         subtitle={selectedPlayer?.realName ? selectedPlayer.realName : '-'}
                       />
                     </div>

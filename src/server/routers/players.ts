@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import * as trpc from '@trpc/server';
 import * as z from 'zod';
@@ -31,6 +33,7 @@ export const playersRouter = router({
             camera: row.get('Preferred camera'),
             preferredStyle: row.get('Preferred map style'),
             lastResult: row.get('Last AOTC result'),
+            isRookie: row.get('Rookie?')?.toUpperCase() === 'R',
           });
         }
 
