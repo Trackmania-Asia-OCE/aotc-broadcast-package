@@ -11,6 +11,7 @@ export interface PlayerDataSpreadsheet {
   'Preferred camera': string;
   'Preferred map style': string;
   'Last AOTC result': string;
+  'Rookie?': string;
 }
 
 export interface PlayerData {
@@ -23,6 +24,7 @@ export interface PlayerData {
   inputDeviceModel: string;
   camera: string;
   preferredStyle: string;
+  isRookie: boolean;
 }
 
 export interface MapDataSpreadsheet {
