@@ -1,15 +1,16 @@
 import { Transition } from '@headlessui/react';
 import * as React from 'react';
+import { useTranslation } from 'next-i18next';
 import { MatchesSectionHeading } from '../components';
 import { ResultItem } from '../components/result-item';
 import { useNextMatchStore } from '../next-match-store';
 
 export interface NextMatchProps {
   isVisible?: boolean;
-  title: string;
 }
 
-export function NextMatch({ isVisible = false, title }: NextMatchProps) {
+export function NextMatch({ isVisible = false }: NextMatchProps) {
+  const { t } = useTranslation('common');
   const players = useNextMatchStore(state => state.players);
 
   return (
@@ -24,7 +25,7 @@ export function NextMatch({ isVisible = false, title }: NextMatchProps) {
           leaveFrom="translate-x-0"
           leaveTo="opacity-100 opacity-0 -translate-x-full"
         >
-          <MatchesSectionHeading title={title} />
+          <MatchesSectionHeading title={t('intermission.next-match-title')} />
         </Transition.Child>
         <div className="grid grid-rows-4 gap-[10px] mt-[20px] overflow-hidden">
           <div className="w-full h-[50px] overflow-hidden">
@@ -40,7 +41,7 @@ export function NextMatch({ isVisible = false, title }: NextMatchProps) {
               <ResultItem
                 position={1}
                 country={players[0]?.country}
-                name={`${players[0]?.nickname}${players[0]?.isRookie ? ' (R)' : ''}`}
+                name={`${players[0]?.nickname ?? ''}${players[0]?.isRookie ? ' (R)' : ''}`}
               />
             </Transition.Child>
           </div>
@@ -57,7 +58,7 @@ export function NextMatch({ isVisible = false, title }: NextMatchProps) {
               <ResultItem
                 position={2}
                 country={players[1]?.country}
-                name={`${players[1]?.nickname}${players[1]?.isRookie ? ' (R)' : ''}`}
+                name={`${players[1]?.nickname ?? ''}${players[1]?.isRookie ? ' (R)' : ''}`}
               />
             </Transition.Child>
           </div>
@@ -74,7 +75,7 @@ export function NextMatch({ isVisible = false, title }: NextMatchProps) {
               <ResultItem
                 position={3}
                 country={players[2]?.country}
-                name={`${players[2]?.nickname}${players[2]?.isRookie ? ' (R)' : ''}`}
+                name={`${players[2]?.nickname ?? ''}${players[2]?.isRookie ? ' (R)' : ''}`}
               />
             </Transition.Child>
           </div>
@@ -91,7 +92,7 @@ export function NextMatch({ isVisible = false, title }: NextMatchProps) {
               <ResultItem
                 position={4}
                 country={players[3]?.country}
-                name={`${players[3]?.nickname}${players[3]?.isRookie ? ' (R)' : ''}`}
+                name={`${players[3]?.nickname ?? ''}${players[3]?.isRookie ? ' (R)' : ''}`}
               />
             </Transition.Child>
           </div>

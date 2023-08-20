@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { Dialog, Transition } from '@headlessui/react';
+import { useTranslation } from 'next-i18next';
 import clsx from 'clsx';
+import { Dialog, Transition } from '@headlessui/react';
 import { ArrowIcon, CameraIcon, ControllerIcon, HashtagIcon, MedalIcon } from '~/components/icons';
 import { useInGameSceneStore } from '../store';
 import { CardSectionHeading } from '../components/card-section-heading';
@@ -14,6 +15,7 @@ export interface PlayerCardProps {
 }
 
 export function PlayerCard({ open, onClose }: PlayerCardProps) {
+  const { t, ready } = useTranslation('common');
   const selectedPlayer = useInGameSceneStore(state => state.selectedPlayer);
 
   const handleClose = (value: boolean) => {
@@ -21,6 +23,10 @@ export function PlayerCard({ open, onClose }: PlayerCardProps) {
       onClose(value);
     }
   };
+
+  if (!ready) {
+    return null;
+  }
 
   return (
     <Transition.Root show={open} as={React.Fragment}>
@@ -51,7 +57,7 @@ export function PlayerCard({ open, onClose }: PlayerCardProps) {
                     </div>
                     <div className="relative flex-1 px-[100px] pt-[108px] pb-[64px]">
                       <div className="space-y-5">
-                        <CardSectionHeading title="Player Information" />
+                        <CardSectionHeading title={t('player-card.title')} />
                         <div className="space-y-4">
                           <InfoItemCard
                             icon={MedalIcon}

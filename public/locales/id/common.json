@@ -12,8 +12,8 @@
     "title": "Informasi Pemain"
   },
   "map-card": {
-    "title": "Map Information",
-    "surface-title": "Track Surface",
+    "title": "Informasi Map",
+    "surface-title": "Permukaan Jalan",
     "road": "Aspal",
     "dirt": "Tanah",
     "grass": "Rumput",

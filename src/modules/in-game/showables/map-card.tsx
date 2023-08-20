@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import clsx from 'clsx';
+import { useTranslation } from 'next-i18next';
 import { ArrowIcon, StopwatchIcon } from '~/components/icons';
 import { trpc } from '~/utils/trpc';
 import { formatTime } from '~/utils/format-time';
@@ -18,6 +19,7 @@ export interface MapCardProps {
 }
 
 export function MapCard({ open, onClose }: MapCardProps) {
+  const { t, ready } = useTranslation('common');
   const selectedMap = useInGameSceneStore(state => state.selectedMap);
   const {
     data: mapRecordData,
@@ -64,6 +66,10 @@ export function MapCard({ open, onClose }: MapCardProps) {
     }
   };
 
+  if (!ready) {
+    return null;
+  }
+
   return (
     <Transition.Root show={open} as={React.Fragment}>
       <Dialog as="div" className="relative z-10" onClose={handleClose}>
@@ -90,7 +96,7 @@ export function MapCard({ open, onClose }: MapCardProps) {
                     <div className="relative flex-1 px-[100px] pt-[108px] pb-[64px]">
                       <div className="space-y-[60px]">
                         <div className="space-y-5">
-                          <CardSectionHeading title="Map Information" />
+                          <CardSectionHeading title={t('map-card.title')} />
                           <div className="space-y-4">
                             <InfoItemCard
                               icon={StopwatchIcon}
@@ -100,7 +106,7 @@ export function MapCard({ open, onClose }: MapCardProps) {
                           </div>
                         </div>
                         <div className="space-y-5">
-                          <CardSectionHeading title="Track Surface" />
+                          <CardSectionHeading title={t('map-card.surface-title')} />
                           <div className="space-y-4">
                             <div className="flex flex-wrap gap-4">
                               {MAP_SURFACES.map(surface => (
@@ -110,7 +116,7 @@ export function MapCard({ open, onClose }: MapCardProps) {
                                     selectedMap?.surfaces.includes(surface) ? 'active' : 'inactive'
                                   }
                                 >
-                                  {surface}
+                                  {t(`map-card.${surface}`)}
                                 </InfoBadge>
                               ))}
                             </div>

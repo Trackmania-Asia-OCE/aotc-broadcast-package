@@ -1,4 +1,6 @@
 import * as React from 'react';
+import { GetStaticPropsContext } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { AOTC2023InGameOverlay } from '~/components/aotc-2023/in-game-overlay';
 import { ControlsContainer } from '~/components/ui/controls-container';
 import { SceneContainer } from '~/components/ui/scene-container';
@@ -13,6 +15,14 @@ import { AOTC2023MapRecords } from '~/modules/in-game/components/in-game-map-rec
 import { MapSelect } from '~/modules/in-game/controls/map-select';
 import { PlayerCard } from '~/modules/in-game/showables/player-card';
 import { MapCard } from '~/modules/in-game/showables/map-card';
+
+export async function getStaticProps({ locale }: GetStaticPropsContext) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? 'en', ['common'])),
+    },
+  };
+}
 
 export default function InGameScene() {
   const currentMatch = useInGameSceneStore(state => state.currentMatch);
