@@ -32,10 +32,10 @@ export default function IntermissionScene() {
         <AOTC2023SceneHeader />
         <SceneContent className="flex items-center justify-start">
           <AOTC2023IntermissionBlock title={t('intermission.title')} subtitle="AOTC 2023">
-            <NextMatch isVisible={isNextMatchVisible} title={t('intermission.next-match-title')} />
+            <NextMatch isVisible={isNextMatchVisible} />
           </AOTC2023IntermissionBlock>
         </SceneContent>
-        <AOTC2023SceneFooter footerText={t('scene.footer-text')} />
+        <AOTC2023SceneFooter />
       </SceneContainer>
       <ControlsContainer>
         <ControlsCard>

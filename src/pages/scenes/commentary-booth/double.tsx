@@ -52,9 +52,9 @@ export default function CommentaryBoothDoubleScene() {
               handle={casterRightHandle}
             />
           </CommentaryBoxWrapper>
-          <MatchResults isVisible={isResultsVisible} title={t('commentary-booth.results-title')} />
+          <MatchResults isVisible={isResultsVisible} />
         </SceneContent>
-        <AOTC2023SceneFooter footerText={t('scene.footer-text')} />
+        <AOTC2023SceneFooter />
       </SceneContainer>
       <ControlsContainer>
         <ControlsCard>
